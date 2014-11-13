@@ -1,5 +1,8 @@
 site_name: LightSpeed VT Documentation
 pages:
-- [index.md, Home]
-- [about.md, About]
+- ['index.md', 'Home']
+- ['about.md', 'About']
+- ['boilerplate/about.md', 'Boilerplate', 'About']
+- ['boilerplate/getting-started.md', 'Boilerplate', 'Getting Started']
+- ['boilerplate/icons.md', 'Boilerplate', 'Icons']
 theme: readthedocs
