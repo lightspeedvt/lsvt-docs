@@ -1,4 +1,3 @@
-## Boilerplate Icons
 A number of icons from the [Entypo](http://www.entypo.com/) library are included with the boilerplate. These can be used on any page that implements the boilerplate, or they can be used standalone.
 
 ### Using the icons
