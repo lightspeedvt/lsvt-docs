@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Getting Started - LightSpeed VT Documentation</title>
+  <title>Setup - LightSpeed VT Documentation</title>
   
 
   
@@ -44,19 +44,8 @@
         
         <span>Boilerplate</span>
             
-                <li class="toctree-l1 current">
-                    <a class="current" href=".">Getting Started</a>
-                    
-                        <ul>
-                        
-                            <li class="toctree-l2"><a href="#overview">Overview</a></li>
-                            
-                                <li><a class="toctree-l3" href="#about-themes">About Themes</a></li>
-                            
-                                <li><a class="toctree-l3" href="#building-themes">Building Themes</a></li>
-                            
-                        
-                        </ul>
+                <li class="toctree-l1 ">
+                    <a class="" href="../getting-started">Getting Started</a>
                     
                 </li>
             
@@ -65,8 +54,23 @@
                     
                 </li>
             
-                <li class="toctree-l1 ">
-                    <a class="" href="../setup">Setup</a>
+                <li class="toctree-l1 current">
+                    <a class="current" href=".">Setup</a>
+                    
+                        <ul>
+                        
+                            <li class="toctree-l2"><a href="#overview">Overview</a></li>
+                            
+                                <li><a class="toctree-l3" href="#clone-the-project">Clone the Project</a></li>
+                            
+                                <li><a class="toctree-l3" href="#install-the-required-modules">Install the Required Modules</a></li>
+                            
+                                <li><a class="toctree-l3" href="#add-the-aws-credentials">Add the AWS Credentials</a></li>
+                            
+                                <li><a class="toctree-l3" href="#become-a-theme-building-superhero">Become a Theme-building Superhero</a></li>
+                            
+                        
+                        </ul>
                     
                 </li>
             
@@ -108,7 +112,7 @@
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../..">Docs</a> &raquo;</li>
-    <li>Getting Started</li>
+    <li>Setup</li>
       <li class="wy-breadcrumbs-aside">
         
       </li>
@@ -118,35 +122,30 @@
           <div role="main">
             <div class="section">
               <h1 id="overview">Overview</h1>
-<p>The "Boilerplate" is the most basic component of the LightSpeed VT platform and represents the global UI of the system. It may help to think of it as the "Page Template" of the system. The components of the Boilerplate are as follows:</p>
-<ul>
-<li>
-<p><strong>"Hamburger Menu"</strong><br />
-Can be hidden or shown by the user and contains links to most areas of the system. Intended to provide quick and convenient access for users.  </p>
-</li>
-<li>
-<p><strong>Page Header</strong><br />
-Establishes branding and exposes crucial navigation elements and functionality throughout the system.</p>
-</li>
-<li>
-<p><strong>Page Background</strong><br />
-Supports and enhances branding and adds visual interest throughout the system.</p>
-</li>
-<li>
-<p><strong>Page Body</strong><br />
-Displays a distinct backdrop for page content and provides "cookie crumb" navigation functionality for sub-pages.</p>
-</li>
-<li>
-<p><strong>Page Footer</strong><br />
-Provides links to less-often used areas of the system as well as legal information and additional branding opportunities (logos, etc)</p>
-</li>
-</ul>
+<p>Once you've successfully <a href="../../boilerplate/install">installed the tools</a> you'll need to perform a few more steps in order to start building themes. These only need to be performed once and then you'll be good to go.</p>
+<h3 id="clone-the-project">Clone the Project</h3>
+<p>The project files are hosted at GitHub, in order to access the repository you must be a member of the LightSpeed VT organization. Please contact an admin in order to get access.</p>
+<p>Once you have access you can clone the following url:<br />
+<code>https://github.com/lightspeedvt/boilerplate-css.git</code></p>
 <hr />
-<h3 id="about-themes">About Themes</h3>
-<p>Themes are built using a custom framework that allows for everything from simple customizations to a complete redesign. This is accomplished by using a variety of tools to preview, develop and publish css files and associated assets.</p>
+<h3 id="install-the-required-modules">Install the Required Modules</h3>
+<p>There are a number of required modules that are not included in the project files. These can be easily added via the command-line tools that were installed previously. Open a terminal (or command prompt) and issue the following commands.</p>
+<ol>
+<li>
+<p>Install Node modules:<br />
+<code>npm install</code></p>
+</li>
+<li>
+<p>Install Bower modules:<br />
+<code>bower install</code></p>
+</li>
+</ol>
 <hr />
-<h3 id="building-themes">Building Themes</h3>
-<p>Please follow the <a href="../../boilerplate/install">installation instructions</a> and then the <a href="../../boilerplate/install">setup instructions</a>. Once complete, go through the <a href="../../boilerplate/tutorial">tutorial</a> and then the <a href="../../boilerplate/docs">documentation</a>.</p>
+<h3 id="add-the-aws-credentials">Add the AWS Credentials</h3>
+<p>The AWS credentials are stored in the file <code>aws-keys.json</code> which is not included in the project files for security purposes. Please contact an admin in order to get a copy and then place it at the project root.</p>
+<hr />
+<h3 id="become-a-theme-building-superhero">Become a Theme-building Superhero</h3>
+<p>Congratulations, you should now be ready to start churning out themes! The best place to start is to go through the <a href="../../boilerplate/tutorial">tutorial</a> and then read the <a href="../../boilerplate/docs">documentation</a>.</p>
 
             </div>
           </div>
@@ -154,10 +153,10 @@ Provides links to less-often used areas of the system as well as legal informati
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../install" class="btn btn-neutral float-right" title="Installation"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../tutorial" class="btn btn-neutral float-right" title="Tutorial"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../install" class="btn btn-neutral" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -183,8 +182,8 @@ Provides links to less-often used areas of the system as well as legal informati
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
         
-      <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="../install" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../install" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../tutorial" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>
 </div>
 </body>
