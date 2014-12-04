@@ -68,7 +68,13 @@
                             
                                 <li><a class="toctree-l3" href="#prerequsites">Prerequsites</a></li>
                             
-                                <li><a class="toctree-l3" href="#step-1-create-a-branch">Step 1 - Create a branch</a></li>
+                                <li><a class="toctree-l3" href="#step-1-create-a-branch">Step 1 - Create a Branch</a></li>
+                            
+                                <li><a class="toctree-l3" href="#step-2-start-live-preview">Step 2 - Start Live Preview</a></li>
+                            
+                                <li><a class="toctree-l3" href="#step-3-adding-images">Step 3 - Adding Images</a></li>
+                            
+                                <li><a class="toctree-l3" href="#step-4-customizing-your-theme">Step 4 - Customizing Your Theme</a></li>
                             
                         
                         </ul>
@@ -121,10 +127,44 @@
 <p>Creating a theme is a straightforward process of customizing variables, adding assets and publishing the resulting files to Amazon. Most of the work will take place locally on your machine and when complete you'll be able to easily publish and save your work in the cloud.</p>
 <h3 id="prerequsites">Prerequsites</h3>
 <p>Before proceeding through the tutorial make sure you've completed the <a href="../../boilerplate/install">installation instructions</a> and the <a href="../../boilerplate/setup">setup instructions</a>.  </p>
-<h3 id="step-1-create-a-branch">Step 1 - Create a branch</h3>
-<p>Themes are stored as "branches" in Git and allow for easy integration, updating and deployment. There is a <code>master</code> branch that contains the default LightSpeed VT theme which most themes will be based off of.  </p>
-<p><strong>Naming your branch</strong><br />
-The name of your branch is important as it is used when publishing your theme to the web. Make sure to make it something unique yet memorable. Feel free to use LGIDs and such, but remember these should be human readable ie: <code>theme/cardone</code> vs <code>theme/theme-main-12953</code></p>
+<h3 id="step-1-create-a-branch">Step 1 - Create a Branch</h3>
+<p>Themes are stored as "branches" in Git which allow for easy integration, updating and deployment. Once you've created your theme's branch you'll be able to work locally and "push" your changes to Github when finshed. This makes it easy to share themes with other designers and to keep a history of what's been changed by whom.</p>
+<p><strong>Naming Your Branch:</strong><br />
+The name of your branch is important as it is used when publishing your theme to the web. Make sure to make it something unique yet memorable. Feel free to use LGIDs and such, but remember these should be human readable ie: <code>theme/cardone</code> not: <code>theme/theme-main-12953</code></p>
+<p><strong>Creating a Branch in Sourcetree:</strong><br />
+Click the "Branch" button and enter a name in the format <code>theme/theme-name</code>  </p>
+<p><img alt="" src="../../boilerplate/img/sourcetree-create-branch.gif" /></p>
+<h3 id="step-2-start-live-preview">Step 2 - Start Live Preview</h3>
+<p>The live preview server allows you to change theme settings and preview them locally in your web browser as you work. This creates an easy way to tweak and see your changes happen in (almost) real time.  </p>
+<p>The server is started via the <code>default</code> task in the Grunt configuration which you can invoke via the command line or in Sublime Text using the Grunt plugin.</p>
+<p><strong>Using the Command-line</strong><br />
+Open the command line and switch to your project directory using <code>cd</code> or similar. Then simply type <code>grunt</code> which will start the server and open the boilerplate preview inside your default browser. Once you've started the server it will continue to run and watch for changes to the project files. When you want to stop the server press <code>ctrl+c</code> or simply close your terminal window.</p>
+<p><img alt="" src="../../boilerplate/img/cmd-run-server.gif" /></p>
+<p><strong>Using Sublime Text</strong><br />
+When using the Grunt plugin for Sublime Text you can simply bring up the command prompt by pressing <code>cmd+shift+p</code> and then typing <code>grunt</code>. Select the "Grunt" option in the menu and then type <code>default</code> and hit enter. You will see the console which shows the server starting, etc. In order to stop the server follow the process above but select "Grunt: Kill Running Tasks" instead of "Grunt".</p>
+<p><img alt="" src="../../boilerplate/img/sublime-run-grunt.gif" /></p>
+<h3 id="step-3-adding-images">Step 3 - Adding Images</h3>
+<p>Let's get started by downloading some images and saving them in our project. Right-click on each of these links and save them to the folder <code>/output/images/</code>  </p>
+<ul>
+<li><a href="http://static.lightspeedvt.com/lsvt-themes-stage/390_logo.png">Logo</a></li>
+<li><a href="http://static.lightspeedvt.com/lsvt-themes-stage/390_contentBackgroundImage.png">Content Background</a></li>
+<li><a href="http://static.lightspeedvt.com/lsvt-themes-stage/390_pageBackgroundImage.jpg">Page Background</a></li>
+<li><a href="http://static.lightspeedvt.com/lsvt-themes/390_footer_shadow.png">Footer Background</a></li>
+</ul>
+<h3 id="step-4-customizing-your-theme">Step 4 - Customizing Your Theme</h3>
+<p>All customizations should be in made in the file <code>/theme/_settings.scss</code> which is located in your project folder.</p>
+<p><strong>Start Fresh</strong><br />
+First, open and delete the contents of <code>theme/_settings.scss</code></p>
+<p><strong>Change the logo</strong><br />
+Copy the following code and paste into the settings file:</p>
+<pre><code class="sass">$logo--url: img(&quot;390_logo.png&quot;);
+
+$header-logo: (
+    width: 178px,
+    height: 61px
+);
+</code></pre>
+
 
             </div>
           </div>
