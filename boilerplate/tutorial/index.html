@@ -64,7 +64,7 @@
                     
                         <ul>
                         
-                            <li class="toctree-l2"><a href="#overview">Overview</a></li>
+                            <li class="toctree-l2"><a href="#creating-themes">Creating Themes</a></li>
                             
                                 <li><a class="toctree-l3" href="#prerequsites">Prerequsites</a></li>
                             
@@ -72,9 +72,13 @@
                             
                                 <li><a class="toctree-l3" href="#step-2-start-live-preview">Step 2 - Start Live Preview</a></li>
                             
-                                <li><a class="toctree-l3" href="#step-3-adding-images">Step 3 - Adding Images</a></li>
+                                <li><a class="toctree-l3" href="#step-3-prepping-your-theme">Step 3 - Prepping Your Theme</a></li>
                             
-                                <li><a class="toctree-l3" href="#step-4-customizing-your-theme">Step 4 - Customizing Your Theme</a></li>
+                                <li><a class="toctree-l3" href="#step-4-add-some-images">Step 4 - Add Some Images</a></li>
+                            
+                                <li><a class="toctree-l3" href="#step-5-customize">Step 5 - Customize!</a></li>
+                            
+                                <li><a class="toctree-l3" href="#congratulations">Congratulations!</a></li>
                             
                         
                         </ul>
@@ -123,48 +127,124 @@
 </div>
           <div role="main">
             <div class="section">
-              <h1 id="overview">Overview</h1>
+              <h1 id="creating-themes">Creating Themes</h1>
 <p>Creating a theme is a straightforward process of customizing variables, adding assets and publishing the resulting files to Amazon. Most of the work will take place locally on your machine and when complete you'll be able to easily publish and save your work in the cloud.</p>
+<hr />
 <h3 id="prerequsites">Prerequsites</h3>
 <p>Before proceeding through the tutorial make sure you've completed the <a href="../../boilerplate/install">installation instructions</a> and the <a href="../../boilerplate/setup">setup instructions</a>.  </p>
+<hr />
 <h3 id="step-1-create-a-branch">Step 1 - Create a Branch</h3>
 <p>Themes are stored as "branches" in Git which allow for easy integration, updating and deployment. Once you've created your theme's branch you'll be able to work locally and "push" your changes to Github when finshed. This makes it easy to share themes with other designers and to keep a history of what's been changed by whom.</p>
 <p><strong>Naming Your Branch:</strong><br />
 The name of your branch is important as it is used when publishing your theme to the web. Make sure to make it something unique yet memorable. Feel free to use LGIDs and such, but remember these should be human readable ie: <code>theme/cardone</code> not: <code>theme/theme-main-12953</code></p>
 <p><strong>Creating a Branch in Sourcetree:</strong><br />
 Click the "Branch" button and enter a name in the format <code>theme/theme-name</code>  </p>
-<p><img alt="" src="../../boilerplate/img/sourcetree-create-branch.gif" /></p>
+<p><img src="../img/sourcetree-create-branch.gif"/></p>
+<hr />
 <h3 id="step-2-start-live-preview">Step 2 - Start Live Preview</h3>
 <p>The live preview server allows you to change theme settings and preview them locally in your web browser as you work. This creates an easy way to tweak and see your changes happen in (almost) real time.  </p>
 <p>The server is started via the <code>default</code> task in the Grunt configuration which you can invoke via the command line or in Sublime Text using the Grunt plugin.</p>
 <p><strong>Using the Command-line</strong><br />
 Open the command line and switch to your project directory using <code>cd</code> or similar. Then simply type <code>grunt</code> which will start the server and open the boilerplate preview inside your default browser. Once you've started the server it will continue to run and watch for changes to the project files. When you want to stop the server press <code>ctrl+c</code> or simply close your terminal window.</p>
-<p><img alt="" src="../../boilerplate/img/cmd-run-server.gif" /></p>
+<p><img src="../img/cmd-run-server.gif"/></p>
 <p><strong>Using Sublime Text</strong><br />
 When using the Grunt plugin for Sublime Text you can simply bring up the command prompt by pressing <code>cmd+shift+p</code> and then typing <code>grunt</code>. Select the "Grunt" option in the menu and then type <code>default</code> and hit enter. You will see the console which shows the server starting, etc. In order to stop the server follow the process above but select "Grunt: Kill Running Tasks" instead of "Grunt".</p>
-<p><img alt="" src="../../boilerplate/img/sublime-run-grunt.gif" /></p>
-<h3 id="step-3-adding-images">Step 3 - Adding Images</h3>
-<p>Let's get started by downloading some images and saving them in our project. Right-click on each of these links and save them to the folder <code>/output/images/</code>  </p>
-<ul>
-<li><a href="http://static.lightspeedvt.com/lsvt-themes-stage/390_logo.png">Logo</a></li>
-<li><a href="http://static.lightspeedvt.com/lsvt-themes-stage/390_contentBackgroundImage.png">Content Background</a></li>
-<li><a href="http://static.lightspeedvt.com/lsvt-themes-stage/390_pageBackgroundImage.jpg">Page Background</a></li>
-<li><a href="http://static.lightspeedvt.com/lsvt-themes/390_footer_shadow.png">Footer Background</a></li>
-</ul>
-<h3 id="step-4-customizing-your-theme">Step 4 - Customizing Your Theme</h3>
-<p>All customizations should be in made in the file <code>/theme/_settings.scss</code> which is located in your project folder.</p>
-<p><strong>Start Fresh</strong><br />
-First, open and delete the contents of <code>theme/_settings.scss</code></p>
-<p><strong>Change the logo</strong><br />
-Copy the following code and paste into the settings file:</p>
-<pre><code class="sass">$logo--url: img(&quot;390_logo.png&quot;);
-
+<p><img src="../img/sublime-run-grunt.gif"/></p>
+<hr />
+<h3 id="step-3-prepping-your-theme">Step 3 - Prepping Your Theme</h3>
+<ol>
+<li>Open the file <code>/theme/_settings.scss</code> which is located in your project folder.</li>
+<li>Delete the image files located in <code>/output/images</code></li>
+</ol>
+<hr />
+<h3 id="step-4-add-some-images">Step 4 - Add Some Images</h3>
+<p>Right-click on each of these images and save them to the folder <code>/output/images/</code>  </p>
+<table>
+<thead>
+<tr>
+<th>Logo</th>
+<th>Footer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="acme_logo_red.png" width="200"/></td>
+<td><img src="acme_footer_shadow.png" width="400"/></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Page Background</th>
+<th>Content Background</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="acme_page_bg.jpg" style="width:300px;height:150px !important;"/></td>
+<td><img src="acme_content_bg.png" style="width:300px;height:150px !important;"/></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="step-5-customize">Step 5 - Customize!</h3>
+<p>Once you've downloaded the images, make sure you have Grunt running and let's get to work! As you proceed down this page, read the descriptions and then copy/paste the code into your settings file. Save the file each time you paste new code in and then watch the changes applied in real time.</p>
+<hr />
+<p><strong>Logo</strong><br />
+Specify both the url of the logo as well as <code>width</code> and <code>height</code> values. Note that these should <strong>NOT</strong> be the actual dimensions of the image, but rather the <strong>display size</strong>. In this case, the logo image is quite large but is scaled down to remain sharp on "retina" aka "hi-dpi" displays.</p>
+<pre><code class="sass">// Logo Settings
+$logo--url: &quot;images/acme_logo_red.png&quot;;
 $header-logo: (
     width: 178px,
     height: 61px
 );
 </code></pre>
 
+<hr />
+<p><strong>Accent Color</strong><br />
+Color the icons and the "rail" above the page when the Hamburger Menu is opened:</p>
+<pre><code class="sass">// Accent Color
+$ui-brand-color: #c1011a;
+</code></pre>
+
+<hr />
+<p><strong>Hamburger Menu</strong><br />
+Set the <code>background</code> to a gradient:</p>
+<pre><code class="sass">// Hamburger Menu
+$tray: (
+    background: linear-gradient(to bottom, rgb(45, 45, 45), rgb(81, 81, 81)),
+    color:#eee
+);
+</code></pre>
+
+<hr />
+<p><strong>Page Background</strong><br />
+Specify the image you've downloaded along with some properties for positioning, etc:</p>
+<pre><code class="sass">// Page Background
+$site-bg: url( &quot;images/acme_page_bg.jpg&quot; ) top center no-repeat;
+</code></pre>
+
+<hr />
+<p><strong>Content Background</strong><br />
+Specify the image you've downloaded along with some properties for positioning, etc:</p>
+<pre><code class="sass">// Content Background
+$body--background: url( &quot;images/acme_content_bg.png&quot; );
+</code></pre>
+
+<hr />
+<p><strong>Footer</strong><br />
+Set a background image and push the footer down using <code>padding-top</code>:</p>
+<pre><code class="sass">// Footer Settings
+$footer: (
+    background: url( &quot;images/acme_footer_shadow.png&quot;) center -100px no-repeat,
+    padding-top: 30px
+);
+</code></pre>
+
+<hr />
+<h3 id="congratulations">Congratulations!</h3>
+<p>You've just built your first theme and and it's looking pretty good. Now that the hard stuff is out of the way, we'll proceed to cover some techniques in-depth that will help take your theme to the next level!</p>
 
             </div>
           </div>
