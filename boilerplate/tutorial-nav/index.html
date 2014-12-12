@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Getting Started - LightSpeed VT Documentation</title>
+  <title>Tutorial - Navigation - LightSpeed VT Documentation</title>
   
 
   
@@ -44,19 +44,8 @@
         
         <span>Boilerplate</span>
             
-                <li class="toctree-l1 current">
-                    <a class="current" href=".">Getting Started</a>
-                    
-                        <ul>
-                        
-                            <li class="toctree-l2"><a href="#what-is-the-boilerplate">What is the Boilerplate?</a></li>
-                            
-                                <li><a class="toctree-l3" href="#about-themes">About Themes</a></li>
-                            
-                                <li><a class="toctree-l3" href="#building-themes">Building Themes</a></li>
-                            
-                        
-                        </ul>
+                <li class="toctree-l1 ">
+                    <a class="" href="../getting-started">Getting Started</a>
                     
                 </li>
             
@@ -105,8 +94,21 @@
                     
                 </li>
             
-                <li class="toctree-l1 ">
-                    <a class="" href="../tutorial-nav">Tutorial - Navigation</a>
+                <li class="toctree-l1 current">
+                    <a class="current" href=".">Tutorial - Navigation</a>
+                    
+                        <ul>
+                        
+                            <li class="toctree-l2"><a href="#navbars-buttons">Navbars &amp; Buttons</a></li>
+                            
+                                <li><a class="toctree-l3" href="#customizing-buttons">Customizing Buttons</a></li>
+                            
+                                <li><a class="toctree-l3" href="#customizing-search">Customizing Search</a></li>
+                            
+                                <li><a class="toctree-l3" href="#creating-a-navigation-bar">Creating A Navigation Bar</a></li>
+                            
+                        
+                        </ul>
                     
                 </li>
             
@@ -163,7 +165,7 @@
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../..">Docs</a> &raquo;</li>
-    <li>Getting Started</li>
+    <li>Tutorial - Navigation</li>
       <li class="wy-breadcrumbs-aside">
         
       </li>
@@ -172,36 +174,85 @@
 </div>
           <div role="main">
             <div class="section">
-              <h1 id="what-is-the-boilerplate">What is the Boilerplate?</h1>
-<p>The "Boilerplate" is the most basic component of the LightSpeed VT platform and represents the global UI of the system. It may help to think of it as the "Page Template" of the system. The components of the Boilerplate are as follows:</p>
-<ul>
-<li>
-<p><strong>"Hamburger Menu"</strong><br />
-Can be hidden or shown by the user and contains links to most areas of the system. Intended to provide quick and convenient access for users.  </p>
-</li>
-<li>
-<p><strong>Page Header</strong><br />
-Establishes branding and exposes crucial navigation elements and functionality throughout the system.</p>
-</li>
-<li>
-<p><strong>Page Background</strong><br />
-Supports and enhances branding and adds visual interest throughout the system.</p>
-</li>
-<li>
-<p><strong>Page Body</strong><br />
-Displays a distinct backdrop for page content and provides "cookie crumb" navigation functionality for sub-pages.</p>
-</li>
-<li>
-<p><strong>Page Footer</strong><br />
-Provides links to less-often used areas of the system as well as legal information and additional branding opportunities (logos, etc)</p>
-</li>
-</ul>
-<hr />
-<h3 id="about-themes">About Themes</h3>
-<p>Themes are built using a custom framework that allows for everything from simple customizations to a complete redesign. This is accomplished by using a variety of tools to preview, develop and publish css files and associated assets.</p>
-<hr />
-<h3 id="building-themes">Building Themes</h3>
-<p>Please follow the <a href="../../boilerplate/install">installation instructions</a> and then the <a href="../../boilerplate/setup">setup instructions</a>. Once complete, go through the <a href="../../boilerplate/tutorial">tutorial</a> and then the <a href="../../boilerplate/docs">documentation</a>.</p>
+              <h1 id="navbars-buttons">Navbars &amp; Buttons</h1>
+<p>You can easily customize the look of the navigation buttons or create your very own navbar. </p>
+<h3 id="customizing-buttons">Customizing Buttons</h3>
+<p>By default the navigation buttons are a simple gray ui with some gradients and shadows added for depth.</p>
+<p><strong>All Your Nav Are Belong To Us</strong><br />
+The buttons in the boilerplate all "extend" a <code>$default-button</code> configuration which allows you to customize them all at once.  </p>
+<p>Add the following to your <code>_theme.scss</code> file and you'll see both the navigation buttons and the buttons in the User Nav update to reflect it. You'll notice that we're only setting the <code>background-color</code> but that the buttons still have a gradient. The framework will take the color you specify and perform some calculations in order to get the shading and colors right.  </p>
+<pre><code class="sass">// Default Buttons
+$button-styles: (
+    background-color: #444,
+    text-shadow: none,
+    color:#eee,
+    box-shadow:none
+);
+</code></pre>
+
+<p><strong>Changing Only The Navigation Buttons</strong><br />
+Rather than changing all of the buttons at once, you may want to tweak <strong>only</strong> the nav buttons. In order to do this, simply customize the <code>$nav-button-styles</code> object like so:</p>
+<pre><code class="sass">// Nav Buttons
+$nav-button-styles: (
+    background-color: $ui-brand-color,
+    text-shadow: $ui-brand-color,
+    color:white
+);
+</code></pre>
+
+<p><strong>Custom Backgrounds (or lack thereof)</strong><br />
+Overriding the <code>background</code> property allows you to completely customize the look and feel of the buttons.</p>
+<p><strong>Flat Buttons:</strong> </p>
+<pre><code class="sass">$nav-button-styles: (
+    background: $ui-brand-color,
+    text-shadow: none,
+    color:white
+);
+</code></pre>
+
+<p><strong>Text-Only Buttons:</strong> </p>
+<pre><code class="sass">$nav-button-styles: (
+    background: none,
+    text-shadow: none,
+    color:$ui-brand-color
+);
+</code></pre>
+
+<h3 id="customizing-search">Customizing Search</h3>
+<p>At this point you've probably noticed that modifying the nav buttons also modifies the search field and button. In some instances (like, now) this can have undesirable results. The good news is that we can customize the search input, button and even the menu using some additional properties:</p>
+<pre><code class="sass">// Restore the border
+$search-input-styles: (
+    border:1px solid rgba(0,0,0,0.2),
+    border-right: none
+);
+// Give the button back it's background
+$search-button-styles: (
+    color: white,
+    background:$ui-brand-color
+);
+</code></pre>
+
+<h3 id="creating-a-navigation-bar">Creating A Navigation Bar</h3>
+<p>An alternative to individual buttons is using a background to create a nav bar. This can be achieved by adding a background to the <code>$nav-styles</code> object.  </p>
+<p>Before we get to the code, let's go back and change a few things based on what we've learned. See if you can remember how to change the following:</p>
+<ol>
+<li>Remove the <code>logo-position</code></li>
+<li>Remove the <code>logo-offset</code></li>
+</ol>
+<p>Once those are done, go ahead and add this code which will create our nav bar:</p>
+<pre><code class="sass">$nav-styles:(
+    background: linear-gradient( to bottom, #646464, #444 ),
+    padding: 8px,
+    border-radius: 4px
+);
+</code></pre>
+
+<p>Now that our nav is bumping up against the crumb navigation, let's bump up the header height a little:</p>
+<pre><code class="sass">$header-styles:(
+    height:140px
+);
+</code></pre>
+
 
             </div>
           </div>
@@ -209,10 +260,10 @@ Provides links to less-often used areas of the system as well as legal informati
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../install" class="btn btn-neutral float-right" title="Installation"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../tutorial-user" class="btn btn-neutral float-right" title="Tutorial - User Menu"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tutorial-logo" class="btn btn-neutral" title="Tutorial - Logo"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -238,8 +289,8 @@ Provides links to less-often used areas of the system as well as legal informati
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
         
-      <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="../install" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../tutorial-logo" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../tutorial-user" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>
 </div>
 </body>

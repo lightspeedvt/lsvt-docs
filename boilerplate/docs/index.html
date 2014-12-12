@@ -80,7 +80,37 @@
                 </li>
             
                 <li class="toctree-l1 ">
-                    <a class="" href="../hamburger-menu">Tutorial - Hamburger Menu</a>
+                    <a class="" href="../tutorial-hamburger">Tutorial - Hamburger Menu</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../tutorial-page">Tutorial - Page</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../tutorial-logo">Tutorial - Logo</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../tutorial-nav">Tutorial - Navigation</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../tutorial-user">Tutorial - User Menu</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../tutorial-crumbs">Tutorial - Crumb Menu</a>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../tutorial-footer">Tutorial - Footer</a>
                     
                 </li>
             
@@ -91,12 +121,19 @@
                         
                             <li class="toctree-l2"><a href="#overview">Overview</a></li>
                             
-                                <li><a class="toctree-l3" href="#global-styles">Global Styles</a></li>
+                                <li><a class="toctree-l3" href="#globals">Globals</a></li>
                             
                                 <li><a class="toctree-l3" href="#hamburger-menu">Hamburger Menu</a></li>
                             
+                                <li><a class="toctree-l3" href="#header">Header</a></li>
+                            
                         
                         </ul>
+                    
+                </li>
+            
+                <li class="toctree-l1 ">
+                    <a class="" href="../scss">Using Custom SCSS</a>
                     
                 </li>
             
@@ -138,34 +175,81 @@
           <div role="main">
             <div class="section">
               <h1 id="overview">Overview</h1>
-<p>This page lists all of the settings available for the Boilerplate. There are also examples for common customizations that you can copy/paste into your own projects. Most of the values shown are the defaults.</p>
+<p>This page lists all of the settings available for the Boilerplate. All of the values shown are the defaults which you can override.</p>
 <hr />
-<h3 id="global-styles">Global Styles</h3>
-<p><strong>Site Background</strong><br />
-Multiple backgrounds can be specified when using overlays. Note that the stacking order is top down as listed.</p>
-<pre><code>$site-bg:( 
-    url( img("bg-overlay.png") ) top right no-repeat,
-    url( img("bg-site.jpg") ) top center no-repeat
+<h3 id="globals">Globals</h3>
+<pre><code class="sass">$link--color: inherit;
+$ui-border: 0 0 0 1px rgba(0,0,0,0.2);
+$ui-brand-color: #3492cf;
+
+$button-styles:(
+    background-color: lightgray,
+    color: inherit,
+    text-shadow: 0 1px white,
+    padding: 0 .6em,
+    border-radius: 2px,
+    box-shadow: (0 0 0 1px rgba(255,255,255,0.2) inset, 0 0 0 1px rgba(0,0,0,0.1)),
+    font-weight: bold,
+    height: 1.8em
 );
 </code></pre>
-<p><strong>Brand Color</strong><br />
-Used to highlight certain ui elements.</p>
-<pre><code>$ui-brand-color: #3492cf;
-</code></pre>
+
 <h3 id="hamburger-menu">Hamburger Menu</h3>
-<p><strong>Tray Height</strong><br />
-These values control the animation when the Hamburger menu is opened and closed. When the user has Quick Links available the <strong>admin</strong> height is used, alternatively the <strong>normal</strong> height is used when no Quick Links are available.</p>
-<pre><code>$tray-height--admin: 250px;
-$tray-height--normal: 190px;
-</code></pre>
-<p><strong>Tray Styles</strong><br />
-Any values specified in this "list" are applied to the Hamburger menu's resulting CSS. The most common settings would be to set a repeating background image.</p>
-<pre><code>$tray:(
-    background: url(img("dark_wall.jpg")),
-    background-size: 300px 300px, 
-    color:#999
+<pre><code class="sass">$tray-styles:(
+    background: url(&quot;images/bg-tray.jpg&quot;),
+    background-size: 300px 300px
+);
+
+$tray-settings:(
+    height-admin: 250px,
+    height-normal: 190px,
+    color-icon: $ui-brand-color,
+    color-header: $ui-brand-color,
+    color-link: #999
 );
 </code></pre>
+
+<h3 id="header">Header</h3>
+<pre><code class="sass">$header-styles: (
+    height: 120px,
+    margin-bottom: 10px
+);
+
+$header-settings: (
+    logo-url: &quot;images/logo.png&quot;,
+    logo-width: 270px,
+    logo-height: 50px,
+    logo-position: default,
+    logo-offset:(
+        top: 20px,
+        left: -14px,
+        bottom: 10px,
+        right: 0
+    )
+);
+
+$location-name-styles: (
+    font-weight:500,
+    margin-top:1em,
+    color: inherit
+);
+
+$nav-styles: (
+    background:none,
+    padding: 0,
+);
+
+$nav-settings: (
+    offset:(
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0
+    )
+);
+
+</code></pre>
+
 
             </div>
           </div>
@@ -173,10 +257,10 @@ Any values specified in this "list" are applied to the Hamburger menu's resultin
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../icons" class="btn btn-neutral float-right" title="Icons"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../scss" class="btn btn-neutral float-right" title="Using Custom SCSS"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../hamburger-menu" class="btn btn-neutral" title="Tutorial - Hamburger Menu"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tutorial-footer" class="btn btn-neutral" title="Tutorial - Footer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -202,8 +286,8 @@ Any values specified in this "list" are applied to the Hamburger menu's resultin
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
         
-      <span><a href="../hamburger-menu" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="../icons" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../tutorial-footer" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../scss" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>
 </div>
 </body>

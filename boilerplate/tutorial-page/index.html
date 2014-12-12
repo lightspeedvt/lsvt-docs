@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Getting Started - LightSpeed VT Documentation</title>
+  <title>Tutorial - Page - LightSpeed VT Documentation</title>
   
 
   
@@ -44,19 +44,8 @@
         
         <span>Boilerplate</span>
             
-                <li class="toctree-l1 current">
-                    <a class="current" href=".">Getting Started</a>
-                    
-                        <ul>
-                        
-                            <li class="toctree-l2"><a href="#what-is-the-boilerplate">What is the Boilerplate?</a></li>
-                            
-                                <li><a class="toctree-l3" href="#about-themes">About Themes</a></li>
-                            
-                                <li><a class="toctree-l3" href="#building-themes">Building Themes</a></li>
-                            
-                        
-                        </ul>
+                <li class="toctree-l1 ">
+                    <a class="" href="../getting-started">Getting Started</a>
                     
                 </li>
             
@@ -95,8 +84,17 @@
                     
                 </li>
             
-                <li class="toctree-l1 ">
-                    <a class="" href="../tutorial-page">Tutorial - Page</a>
+                <li class="toctree-l1 current">
+                    <a class="current" href=".">Tutorial - Page</a>
+                    
+                        <ul>
+                        
+                            <li class="toctree-l2"><a href="#better-backgrounds">Better Backgrounds</a></li>
+                            
+                                <li><a class="toctree-l3" href="#adding-an-overlay">Adding an overlay</a></li>
+                            
+                        
+                        </ul>
                     
                 </li>
             
@@ -163,7 +161,7 @@
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../..">Docs</a> &raquo;</li>
-    <li>Getting Started</li>
+    <li>Tutorial - Page</li>
       <li class="wy-breadcrumbs-aside">
         
       </li>
@@ -172,36 +170,42 @@
 </div>
           <div role="main">
             <div class="section">
-              <h1 id="what-is-the-boilerplate">What is the Boilerplate?</h1>
-<p>The "Boilerplate" is the most basic component of the LightSpeed VT platform and represents the global UI of the system. It may help to think of it as the "Page Template" of the system. The components of the Boilerplate are as follows:</p>
-<ul>
-<li>
-<p><strong>"Hamburger Menu"</strong><br />
-Can be hidden or shown by the user and contains links to most areas of the system. Intended to provide quick and convenient access for users.  </p>
-</li>
-<li>
-<p><strong>Page Header</strong><br />
-Establishes branding and exposes crucial navigation elements and functionality throughout the system.</p>
-</li>
-<li>
-<p><strong>Page Background</strong><br />
-Supports and enhances branding and adds visual interest throughout the system.</p>
-</li>
-<li>
-<p><strong>Page Body</strong><br />
-Displays a distinct backdrop for page content and provides "cookie crumb" navigation functionality for sub-pages.</p>
-</li>
-<li>
-<p><strong>Page Footer</strong><br />
-Provides links to less-often used areas of the system as well as legal information and additional branding opportunities (logos, etc)</p>
-</li>
-</ul>
+              <h1 id="better-backgrounds">Better Backgrounds</h1>
+<p>Using page overlays and multiple backgrounds is a great way to add visual interest and spice up your custom themes. The following examples provide some ideas and inspiration.</p>
 <hr />
-<h3 id="about-themes">About Themes</h3>
-<p>Themes are built using a custom framework that allows for everything from simple customizations to a complete redesign. This is accomplished by using a variety of tools to preview, develop and publish css files and associated assets.</p>
-<hr />
-<h3 id="building-themes">Building Themes</h3>
-<p>Please follow the <a href="../../boilerplate/install">installation instructions</a> and then the <a href="../../boilerplate/setup">setup instructions</a>. Once complete, go through the <a href="../../boilerplate/tutorial">tutorial</a> and then the <a href="../../boilerplate/docs">documentation</a>.</p>
+<h3 id="adding-an-overlay">Adding an overlay</h3>
+<p>Building off our previous work, we'll download a tranparent image and add it as an overlay:</p>
+<table>
+<thead>
+<tr>
+<th>Overlay Image:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="../tutorial/acme_overlay.png" width="200"/></td>
+</tr>
+</tbody>
+</table>
+<p>Using the <code>$page-overlay-styles</code> config we'll do a number of things:</p>
+<ol>
+<li>Add two instances of our "Boilerplate" mascot by specifying multiple background images.</li>
+<li>Set the width of our overlay to <code>1200px</code> and center it on the page using a combination of <code>left:50%</code> and setting it's <code>margin-left</code> to half of it's width <code>-600px</code></li>
+<li>Use <code>background-size</code> to scale down the images </li>
+</ol>
+<pre><code class="sass">$page-overlay-styles:(
+    background: (
+        url( &quot;images/acme_overlay.png&quot;) top left no-repeat,
+        url( &quot;images/acme_overlay.png&quot;) top right no-repeat,
+    ),
+    width:1200px,
+    left:50%,
+    top:160px,
+    margin-left:-600px,
+    background-size: 180px 360px
+);
+</code></pre>
+
 
             </div>
           </div>
@@ -209,10 +213,10 @@ Provides links to less-often used areas of the system as well as legal informati
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../install" class="btn btn-neutral float-right" title="Installation"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../tutorial-logo" class="btn btn-neutral float-right" title="Tutorial - Logo"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tutorial-hamburger" class="btn btn-neutral" title="Tutorial - Hamburger Menu"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -238,8 +242,8 @@ Provides links to less-often used areas of the system as well as legal informati
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
         
-      <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="../install" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../tutorial-hamburger" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../tutorial-logo" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>
 </div>
 </body>
