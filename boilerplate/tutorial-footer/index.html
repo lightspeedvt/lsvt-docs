@@ -187,8 +187,8 @@
 <p><strong>Simplifying The Lip</strong></p>
 <pre><code class="sass">$body-footer-styles:(
     background: white,
-    box-shadow:none,
-    border-radius:0
+    border-radius:0,
+    height:12px
 );
 </code></pre>
 
@@ -204,14 +204,7 @@ $body-content-styles:(
 );
 </code></pre>
 
-<p><strong>Step 2</strong><br />
-Hide the bottom rail completely:</p>
-<pre><code class="sass">$body-footer-styles:(
-    display:none
-);
-</code></pre>
-
-<p><strong>Step 3</strong>
+<p><strong>Step 2</strong>
 Modify the Powered By logo and the nav divider color:</p>
 <pre><code class="sass">$footer-settings: (
     poweredby-fill: #4D4D4D,
@@ -224,11 +217,40 @@ Modify the Powered By logo and the nav divider color:</p>
 Flood fill the footer background, add some padding to the top and change the text color:</p>
 <pre><code class="sass">$footer-styles: (
     background: #333,
-    padding-top:30px,
+    padding-top:20px,
     color: #9C9C9C
 );
 </code></pre>
 
+<p><strong>Step 5</strong>
+Let's add some branding/logos next to the "Powered By" logo. Download the following images:</p>
+<table>
+<thead>
+<tr>
+<th>Logo 1:</th>
+<th>Logo 2:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="../tutorial/acme_brand_1.png" width="200"/></td>
+<td><img src="../tutorial/acme_brand_2.png" width="200"/></td>
+</tr>
+</tbody>
+</table>
+<p>Now modify your <code>$footer-settings</code> to look like this:</p>
+<pre><code class="sass">$footer-settings: (
+    poweredby-fill: #4D4D4D,
+    poweredby-opacity: 100%,
+    divider-color: $ui-brand-color,
+    brand-logos:(
+        &quot;images/acme_brand_1.png&quot; 50px 40px,
+        &quot;images/acme_brand_2.png&quot; 90px 40px,
+    )
+);
+</code></pre>
+
+<p><strong>NOTE: </strong> The brand logos should always be formatted as <code>"url" width height,</code> the comma at the end is required as well.</p>
 <h3 id="next-steps">Next Steps</h3>
 <p>You should now have a pretty good idea of what's possible. Check out the <a href="../docs">Documentation</a> for all of the possible configuration options, and if you're feeling particularly adventurous check out <a href="../scss">Using Custom SCSS</a>.</p>
 

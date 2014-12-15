@@ -125,7 +125,19 @@
                             
                                 <li><a class="toctree-l3" href="#hamburger-menu">Hamburger Menu</a></li>
                             
+                                <li><a class="toctree-l3" href="#page">Page</a></li>
+                            
                                 <li><a class="toctree-l3" href="#header">Header</a></li>
+                            
+                                <li><a class="toctree-l3" href="#navigation">Navigation</a></li>
+                            
+                                <li><a class="toctree-l3" href="#user-navigationmenu">User Navigation/Menu</a></li>
+                            
+                                <li><a class="toctree-l3" href="#crumb-navigation">Crumb Navigation</a></li>
+                            
+                                <li><a class="toctree-l3" href="#body-content-area">Body (Content Area)</a></li>
+                            
+                                <li><a class="toctree-l3" href="#footer">Footer</a></li>
                             
                         
                         </ul>
@@ -192,8 +204,11 @@ $button-styles:(
     font-weight: bold,
     height: 1.8em
 );
+
+$debug: false;
 </code></pre>
 
+<p><strong>NOTE: </strong> If you set <code>$debug: true</code> in your <code>_theme.scss</code> you will see borders and backgrounds on each element which can help diagnose issues.</p>
 <h3 id="hamburger-menu">Hamburger Menu</h3>
 <pre><code class="sass">$tray-styles:(
     background: url(&quot;images/bg-tray.jpg&quot;),
@@ -206,6 +221,18 @@ $tray-settings:(
     color-icon: $ui-brand-color,
     color-header: $ui-brand-color,
     color-link: #999
+);
+</code></pre>
+
+<h3 id="page">Page</h3>
+<pre><code class="sass">$page-styles: (
+    background: url( &quot;images/bg-site.jpg&quot; ) top center no-repeat,
+    background-color: #dbdbdb
+);
+
+$page-overlay-styles: (
+    position:absolute,
+    top:0, left:0, right:0, bottom: 0
 );
 </code></pre>
 
@@ -233,8 +260,10 @@ $location-name-styles: (
     margin-top:1em,
     color: inherit
 );
+</code></pre>
 
-$nav-styles: (
+<h3 id="navigation">Navigation</h3>
+<pre><code class="sass">$nav-styles: (
     background:none,
     padding: 0,
 );
@@ -248,6 +277,97 @@ $nav-settings: (
     )
 );
 
+$nav-button-styles:(
+    // Inherits all properties of $button-styles
+    margin-right: 4px
+;
+
+$nav-divider-styles: (
+    width: 1px,
+    top:0,
+    bottom:0
+);
+
+$search-input-styles: (
+    background:white,
+    color:inherit,
+    text-shadow:none,
+    font-weight:normal,
+    border-radius: $radius 0 0 $radius // Uses the radius from $nav-button-styles by default
+);
+
+$search-button-styles: (
+    // Inherits all properties of $nav-button-styles
+);
+
+</code></pre>
+
+<h3 id="user-navigationmenu">User Navigation/Menu</h3>
+<pre><code class="sass">$user-nav-button: (
+    border-radius: 0 0 2px 2px
+);
+
+$user-nav-styles: (
+    font-size: map-get( $font, size-small )
+);
+</code></pre>
+
+<h3 id="crumb-navigation">Crumb Navigation</h3>
+<pre><code class="sass">$crumb-nav-styles: (
+    // No defaults
+);
+
+$crumb-menu-styles: (
+    background: linear-gradient( to right, lightgray, #eee 20%, #fff, #eee 80%, lightgray ),
+    padding:1px 8px,
+    box-shadow: ($ui-border inset, 0 3px 3px rgba(0,0,0,0.2)),
+    border-radius: 4px 4px 0 0,
+    text-shadow: 0 1px #eee,
+    font-size: map-get( $font, size-boilerplate )
+);
+
+$crumb-menu-settings: (
+    divider-color: rgba(0,0,0,0.3)
+);
+
+</code></pre>
+
+<h3 id="body-content-area">Body (Content Area)</h3>
+<pre><code class="sass">$body-styles: (
+    // No defaults
+); 
+
+$body-content-styles: (
+    background: url(&quot;images/bg-body.png&quot;),
+    background-size: 100% auto,
+    position:relative,
+    padding-top: 2em,
+    padding-bottom: 2em,
+    margin-bottom: 10px
+);
+
+$body-footer-styles: (
+    background: linear-gradient( to right, lightgray, #eee 20%, #fff, #eee 80%, lightgray ),
+    height: 14px,
+    box-shadow: $ui-border inset,
+    border-radius: 0 0 4px 4px
+);
+</code></pre>
+
+<h3 id="footer">Footer</h3>
+<pre><code class="sass">// Footer
+$footer-styles: (
+    height: auto,
+    background: none,
+    padding-bottom:40px
+);
+
+$footer-settings: (
+    poweredby-fill: gray,
+    poweredby-opacity: 80%,
+    divider-color: rgba(0,0,0,0.2),
+    brand-logos:()
+);
 </code></pre>
 
 
