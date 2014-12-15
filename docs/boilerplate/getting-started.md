@@ -1,50 +1,27 @@
-#Getting Started - Mac OSX
+#What is the Boilerplate?
+The "Boilerplate" is the most basic component of the LightSpeed VT platform and represents the global UI of the system. It may help to think of it as the "Page Template" of the system. The components of the Boilerplate are as follows:
 
-##Required Tools
-The boilerplate themes are generated via a specific set of tools that must be installed on your system. Once installed you'll be ready to start generating themes!
+* **"Hamburger Menu"**  
+Can be hidden or shown by the user and contains links to most areas of the system. Intended to provide quick and convenient access for users.  
 
-##Automated Installation
-The various tools and utilities can be installed automatically using [Kitchenplan](http://kitchenplan.github.io/kitchenplan/)
+* **Page Header**  
+Establishes branding and exposes crucial navigation elements and functionality throughout the system.
 
-1. Update Ruby Gems
+* **Page Background**  
+Supports and enhances branding and adds visual interest throughout the system.
 
-    >`sudo gem update --system`
+* **Page Body**  
+Displays a distinct backdrop for page content and provides "cookie crumb" navigation functionality for sub-pages.
 
-2. Install Kitchenplan
+* **Page Footer**  
+Provides links to less-often used areas of the system as well as legal information and additional branding opportunities (logos, etc)
 
-    `gem install kitchenplan`
+***
 
-3. Run Kitchenplan setup
+###About Themes
+Themes are built using a custom framework that allows for everything from simple customizations to a complete redesign. This is accomplished by using a variety of tools to preview, develop and publish css files and associated assets.
 
-    `kitchenplan setup`
+***
 
-4. Set config repository
-    Kitchenplan will prompt you with the following, type `y` and press enter:
-
-    `Do you have a config repository? [y,n]`
-
-##Manual Installation
-
-###Sass
-
-1. **Install the Ruby "Gem"**
-    Open Applications/Utilities/Terminal.app and paste the following code, then hit enter.
-
-    `gem install sass`
-
-2. If you receive an error, add `sudo` and try again, you will be prompted for your password.
-
-    `sudo gem install sass`
-
-[Full Instructions Here](http://sass-lang.com/install)
-
-###Grunt
-
-1. **Download and run NodeJS installer** - http://nodejs.org/
-
-2. **Install the Grunt CLI (Command-Line Interface)**
-    Open Applications/Utilities/Terminal.app and paste the following code, then hit enter.
-
-    `npm install -g grunt-cli`
-
-[Full Instructions Here](http://gruntjs.com/getting-started)
+###Building Themes
+Please follow the [installation instructions](boilerplate/install) and then the [setup instructions](boilerplate/setup). Once complete, go through the [tutorial](boilerplate/tutorial) and then the [documentation](boilerplate/docs).
