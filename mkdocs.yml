@@ -1,24 +1,24 @@
-site_name: LightSpeed VT Documentation
+site_name: LightSpeed VT - Boilerplate
 pages:
-- ['index.md', 'Home']
  # Boilerplate
-- ['boilerplate/getting-started.md', 'Boilerplate', 'Getting Started']
-- ['boilerplate/install.md', 'Boilerplate', 'Installation']
-- ['boilerplate/setup.md', 'Boilerplate', 'Setup']
+- ['index.md', 'Getting Started']
+- ['boilerplate/install.md', 'Configuration', 'Installation']
+- ['boilerplate/setup.md', 'Configuration', 'Setup']
 # Tutorial
-- ['boilerplate/tutorial-intro.md', 'Boilerplate', 'Tutorial - Intro']
-- ['boilerplate/tutorial-step-1.md', 'Boilerplate', 'Tutorial - Step 1']
-- ['boilerplate/tutorial-step-2.md', 'Boilerplate', 'Tutorial - Step 2']
-- ['boilerplate/tutorial-step-3.md', 'Boilerplate', 'Tutorial - Step 3']
-- ['boilerplate/tutorial-hamburger.md', 'Boilerplate', 'Tutorial - Hamburger Menu']
-- ['boilerplate/tutorial-page.md', 'Boilerplate', 'Tutorial - Page']
-- ['boilerplate/tutorial-logo.md', 'Boilerplate', 'Tutorial - Logo']
-- ['boilerplate/tutorial-nav.md', 'Boilerplate', 'Tutorial - Navigation']
-- ['boilerplate/tutorial-user.md', 'Boilerplate', 'Tutorial - User Menu']
-- ['boilerplate/tutorial-crumbs.md', 'Boilerplate', 'Tutorial - Crumb Menu']
-- ['boilerplate/tutorial-footer.md', 'Boilerplate', 'Tutorial - Footer']
+- ['boilerplate/tutorial-intro.md', 'Tutorial', 'Intro']
+- ['boilerplate/tutorial-step-1.md', 'Tutorial', 'Step 1 - Using Branches']
+- ['boilerplate/tutorial-step-2.md', 'Tutorial', 'Step 2 - Using Grunt']
+- ['boilerplate/tutorial-step-3.md', 'Tutorial', 'Step 3 - Editing Your Theme']
+- ['boilerplate/tutorial-hamburger.md', 'Tutorial', 'Component - Hamburger Menu']
+- ['boilerplate/tutorial-page.md', 'Tutorial', 'Component - Page']
+- ['boilerplate/tutorial-logo.md', 'Tutorial', 'Component - Logo']
+- ['boilerplate/tutorial-nav.md', 'Tutorial', 'Component - Navigation']
+- ['boilerplate/tutorial-user.md', 'Tutorial', 'Component - User Menu']
+- ['boilerplate/tutorial-crumbs.md', 'Tutorial', 'Component - Crumb Menu']
+- ['boilerplate/tutorial-footer.md', 'Tutorial', 'Component - Footer']
 # Documentation
-- ['boilerplate/docs.md', 'Boilerplate', 'Documentation']
-- ['boilerplate/scss.md', 'Boilerplate', 'Using Custom SCSS']
-- ['boilerplate/icons.md', 'Boilerplate', 'Icons']
+- ['boilerplate/docs.md', 'Reference', 'Documentation']
+- ['boilerplate/scss.md', 'Reference', 'Using Custom SCSS']
+- ['boilerplate/icons.md', 'Reference', 'Icons']
+- ['boilerplate/porting.md', 'Reference', 'Porting Existing Themes']
 theme: readthedocs
