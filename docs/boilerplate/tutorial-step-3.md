@@ -10,24 +10,10 @@ This is where the fun begins, we'll walk through prepping your newly created the
 
 ***
 
-###Adding Images
-Right-click on each of these images and save them to the folder `/output/images/`  
-
-| Logo:         | Footer:       |
-| ------------- | ------------- |
-| <img src="../tutorial/acme_logo_red.png" width="200"/> | <img src="../tutorial/acme_footer_shadow.png" width="400"/> |
-
-| Page Background: | Content Background: |
-| ---------------- | ------------------- |
-| <img src="../tutorial/acme_page_bg.jpg" style="width:300px;height:150px !important;"/> | <img src="../tutorial/acme_content_bg.png" style="width:300px;height:150px !important;"/> |
-
-***
-
-###Setting Custom Values
-Once you've downloaded the images, make sure you have Grunt running and let's get to work! As you proceed down this page, read the descriptions and then copy/paste the code into your `_theme.scss` file. Save the file each time you paste in new code and watch the changes happen in real time.
-
-**Settings vs. Styles**  
+###FYI - Settings vs. Styles
 Most of the configuration objects have an identifier that relates to how they are compiled or used in the framework. Any properties defined as part of a `-styles` object will be added as CSS which allows you to use any styles you'd like. Properties defined in a `-settings` object are typically used to configure children of elements or non-css properties.
+
+**NOTE: ** You don't have to copy/paste these, they are for example only.
 
 **Example `-styles` object:**  
 ```sass
@@ -46,7 +32,24 @@ $header-settings: (
 );
 ```
 
+***
 
+###Adding Images
+Right-click on each of these images and save them to the folder `/output/images/`  
+
+| Logo:         | Footer:       |
+| ------------- | ------------- |
+| <img src="../tutorial/acme_logo_red.png" width="200"/> | <img src="../tutorial/acme_footer_shadow.png" width="400"/> |
+
+| Page Background: | Content Background: |
+| ---------------- | ------------------- |
+| <img src="../tutorial/acme_page_bg.jpg" style="width:300px;height:150px !important;"/> | <img src="../tutorial/acme_content_bg.png" style="width:300px;height:150px !important;"/> |
+
+***
+
+###Setting Custom Values
+Once you've downloaded the images, make sure you have Grunt running and let's get to work! As you proceed down this page, read the descriptions and then copy/paste the code into your `_theme.scss` file. Save the file each time you paste in new code and watch the changes happen in real time.
+***
 
 **Logo**  
 Specify both the url of the logo as well as `width` and `height` values. Note that these should **NOT** be the actual dimensions of the image, but rather the **display size**. In this case, the logo image is quite large but is scaled down to remain sharp on "retina" aka "hi-dpi" displays.
