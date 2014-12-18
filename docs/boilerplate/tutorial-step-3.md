@@ -35,15 +35,15 @@ $header-styles: (
     height: 120px,
     margin-bottom: 10px,
     // Any CSS other properties
-)
+);
 ```
 
 **Example `-settings` object:**  
 ```sass
-$header-settings: map-merge((
+$header-settings: (
     logo-position: center
     // Non-CSS settings
-)
+);
 ```
 
 
