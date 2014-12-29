@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Component - User Menu - LightSpeed VT - Boilerplate</title>
+  <title>Preview & Publish - LightSpeed VT - Boilerplate</title>
   
 
   
@@ -108,17 +108,8 @@
                     
                 </li>
             
-                <li class="toctree-l2 current">
-                    <a class="current" href=".">Component - User Menu</a>
-                    
-                        <ul>
-                        
-                            <li class="toctree-l3"><a href="#user-nav-ideas">User Nav Ideas</a></li>
-                            
-                                <li><a class="toctree-l4" href="#un-buttoning">Un-Buttoning</a></li>
-                            
-                        
-                        </ul>
+                <li class="toctree-l2 ">
+                    <a class="" href="../tutorial-user">Component - User Menu</a>
                     
                 </li>
             
@@ -138,8 +129,21 @@
         
             <span>Reference</span>
             
-                <li class="toctree-l2 ">
-                    <a class="" href="../publishing">Preview & Publish</a>
+                <li class="toctree-l2 current">
+                    <a class="current" href=".">Preview & Publish</a>
+                    
+                        <ul>
+                        
+                            <li class="toctree-l3"><a href="#publishing-your-theme">Publishing Your Theme</a></li>
+                            
+                                <li><a class="toctree-l4" href="#previewing-your-theme">Previewing Your Theme</a></li>
+                            
+                                <li><a class="toctree-l4" href="#using-your-theme">Using Your Theme</a></li>
+                            
+                                <li><a class="toctree-l4" href="#versioning-and-invalidation">Versioning And Invalidation</a></li>
+                            
+                        
+                        </ul>
                     
                 </li>
             
@@ -186,7 +190,7 @@
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../..">Docs</a> &raquo;</li>
-    <li>Component - User Menu</li>
+    <li>Preview & Publish</li>
       <li class="wy-breadcrumbs-aside">
         
       </li>
@@ -195,18 +199,26 @@
 </div>
           <div role="main">
             <div class="section">
-              <h1 id="user-nav-ideas">User Nav Ideas</h1>
-<p>The user nav contains a few buttons and menus relevant to the logged in user.</p>
-<h3 id="un-buttoning">Un-Buttoning</h3>
-<p>In this example we'll remove the button styling and tweak things a little to give the user nav a cleaner look.</p>
-<pre><code class="sass">$user-nav-button:(
-    background:none,
-    color:inherit,
-    padding-left:10px,
-    height:30px
-);
-</code></pre>
-
+              <h1 id="publishing-your-theme">Publishing Your Theme</h1>
+<p>Once you've gotten your theme ready locally, publishing and previewing it is easy. Follow these instructions and you'll be ready to go!</p>
+<ol>
+<li>Open the terminal</li>
+<li>If you have grunt running hit <code>CTRL</code> + <code>C</code> to stop it.</li>
+<li>Type <code>grunt publish</code> and hit <code>ENTER</code></li>
+</ol>
+<p>Your theme and any images assets will be uploaded to amazon and the urls will be output in the terminal like so:</p>
+<p><img src="../img/cmd-publish.gif"/></p>
+<h3 id="previewing-your-theme">Previewing Your Theme</h3>
+<p>After running the publish command, Grunt will display "preview" and "production" urls for your theme. The preview url will allow you to view your theme without worrying about invalidation. Use this url until you're ready to "go live" with your theme.  </p>
+<p>In order to preview your theme, log in to any system and go to this page:
+<a href="http://vt.lightspeedvt.com/boilerplate_util.cfm">http://vt.lightspeedvt.com/boilerplate_util.cfm</a>  </p>
+<p>You'll be able to turn the boilerplate on and off as well as specify the url to your published css file. Note that this will only effect your current session and not alter any group settings.</p>
+<h3 id="using-your-theme">Using Your Theme</h3>
+<p>When you're ready to use your theme simply enter the "production" url into the <a href="http://vt.lightspeedvt.com/group_management/group_management.cfm">group settings page</a> and save your settings.</p>
+<h3 id="versioning-and-invalidation">Versioning And Invalidation</h3>
+<p>Since the production url for your theme is distributed via Cloudfront, you'll need to either invalidate it or use a "query string" value to load the latest version. If you're only changing the css file itself and none of the images you can simply add a version number like so:  </p>
+<p><code>http://static.lightspeedvt.com/theme/my-theme/main.css?v1.0</code></p>
+<p>If you're changing images or just want to make sure you're serving the latest files, you can invalidate via Grunt using <code>grunt invalidate</code> which will take a while to complete.</p>
 
             </div>
           </div>
@@ -214,10 +226,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../tutorial-crumbs" class="btn btn-neutral float-right" title="Component - Crumb Menu"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../docs" class="btn btn-neutral float-right" title="Documentation"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../tutorial-nav" class="btn btn-neutral" title="Component - Navigation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tutorial-footer" class="btn btn-neutral" title="Component - Footer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -243,8 +255,8 @@
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
         
-      <span><a href="../tutorial-nav" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="../tutorial-crumbs" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../tutorial-footer" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../docs" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>
 </div>
 </body>
