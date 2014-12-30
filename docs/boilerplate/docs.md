@@ -57,6 +57,14 @@ $page-overlay-styles: (
 );
 ```
 
+###Custom Page Settings
+
+```sass
+$main-menu-styles:();
+
+$training-center-styles:();
+```
+
 ###Header
 
 ```sass
