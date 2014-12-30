@@ -2,6 +2,7 @@ site_name: LightSpeed VT - Boilerplate
 pages:
  # Boilerplate
 - ['index.md', 'Getting Started']
+- ['changelog.md', 'Changelog']
 - ['boilerplate/install.md', 'Configuration', 'Installation']
 - ['boilerplate/setup.md', 'Configuration', 'Setup']
 # Tutorial
