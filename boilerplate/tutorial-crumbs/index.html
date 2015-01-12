@@ -130,6 +130,8 @@
                             
                                 <li><a class="toctree-l4" href="#simplifying-things">Simplifying Things</a></li>
                             
+                                <li><a class="toctree-l4" href="#automatic-gradient-fill">Automatic Gradient Fill</a></li>
+                            
                         
                         </ul>
                     
@@ -225,6 +227,13 @@
 
 $crumb-menu-settings:(
     divider-color: $ui-brand-color
+);
+</code></pre>
+
+<h3 id="automatic-gradient-fill">Automatic Gradient Fill</h3>
+<p>If you specify a <code>background-color</code> value and no <code>background</code> value, a gradient fill will automatically be generated for you based on the color you specify.</p>
+<pre><code class="sass">$crumb-menu-styles:(
+    background-color: red
 );
 </code></pre>
 

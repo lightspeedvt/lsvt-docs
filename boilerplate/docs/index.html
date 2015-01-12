@@ -331,7 +331,7 @@ $nav-settings: (
 $nav-button-styles:(
     // Inherits all properties of $button-styles
     margin-right: 4px
-;
+);
 
 $nav-divider-styles: (
     width: 1px,
@@ -369,12 +369,13 @@ $user-nav-styles: (
 );
 
 $crumb-menu-styles: (
-    background: linear-gradient( to right, lightgray, #eee 20%, #fff, #eee 80%, lightgray ),
-    padding:1px 8px,
+    background-color: #eee,
+    padding:6px 8px,
     box-shadow: ($ui-border inset, 0 3px 3px rgba(0,0,0,0.2)),
     border-radius: 4px 4px 0 0,
     text-shadow: 0 1px #eee,
-    font-size: map-get( $font, size-boilerplate )
+    font-size: map-get( $font, size-boilerplate ),
+    min-height:28px
 );
 
 $crumb-menu-settings: (
@@ -398,7 +399,7 @@ $body-content-styles: (
 );
 
 $body-footer-styles: (
-    background: linear-gradient( to right, lightgray, #eee 20%, #fff, #eee 80%, lightgray ),
+    background-color: #eee,
     height: 14px,
     box-shadow: $ui-border inset,
     border-radius: 0 0 4px 4px
