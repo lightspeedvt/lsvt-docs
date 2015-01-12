@@ -22,6 +22,15 @@ $body-footer-styles:(
 );
 ```
 
+**Automatic Gradient Fill**  
+If you specify a `background-color` value and no `background` value, a gradient fill will automatically be generated for you based on the color you specify.
+
+```sass
+$body-footer-styles:(
+    background-color: red
+);
+```
+
 ###Bringing It Home
 Here we'll walk through a full customization in detailed steps.
 

@@ -16,3 +16,11 @@ $crumb-menu-settings:(
 );
 ```
 
+### Automatic Gradient Fill
+If you specify a `background-color` value and no `background` value, a gradient fill will automatically be generated for you based on the color you specify.
+
+```sass
+$crumb-menu-styles:(
+    background-color: red
+);
+```

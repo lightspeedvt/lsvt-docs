@@ -18,6 +18,7 @@ pages:
 - ['boilerplate/tutorial-crumbs.md', 'Tutorial', 'Component - Crumb Menu']
 - ['boilerplate/tutorial-footer.md', 'Tutorial', 'Component - Footer']
 # Documentation
+- ['boilerplate/porting.md', 'Reference', 'Porting Existing Themes']
 - ['boilerplate/publishing.md', 'Reference', 'Preview & Publish']
 - ['boilerplate/docs.md', 'Reference', 'Documentation']
 - ['boilerplate/specific-pages.md', 'Reference', 'Customizing Specific Pages']
