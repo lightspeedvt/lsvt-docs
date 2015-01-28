@@ -124,6 +124,8 @@
                             
                                 <li><a class="toctree-l4" href="#creating-a-navigation-bar">Creating A Navigation Bar</a></li>
                             
+                                <li><a class="toctree-l4" href="#using-an-image-for-the-nav-bar">Using an Image for the Nav Bar</a></li>
+                            
                         
                         </ul>
                     
@@ -293,6 +295,46 @@ $search-button-styles: (
 <p>Now that our nav is bumping up against the crumb navigation, let's bump up the header height a little:</p>
 <pre><code class="sass">$header-styles:(
     height:140px
+);
+</code></pre>
+
+<h3 id="using-an-image-for-the-nav-bar">Using an Image for the Nav Bar</h3>
+<p>It's possible to use an image for the nav bar, but requires some special considerations. In order allow the nav bar to scale, one image is essentially "sliced" into three parts: left, center and right. Download the following image to your <code>output/images/</code> folder to test it out:</p>
+<table>
+<thead>
+<tr>
+<th>Navbar:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="../tutorial/acme_navbar.png"/></td>
+</tr>
+</tbody>
+</table>
+<p>First, let's set the height and width of our navbar. You'll notice that we're using a slightly larger width, in which case the navbar will center horizontally:</p>
+<pre><code class="sass">$nav-styles:(
+    height: 66px,
+    width: 980px
+);
+</code></pre>
+
+<p>Now we'll use the  <code>navbar-image</code> and <code>navbar-cap-width</code> settings to implement the navbar image we downloaded:  </p>
+<pre><code class="sass">$nav-settings: (
+    navbar-image: url(images/acme_navbar.png),
+    navbar-cap-width: 30px
+);
+</code></pre>
+
+<p>In order to make things look better visually, we'll add <code>padding-top</code> to the nav-menu in order to move the buttons down a bit:</p>
+<pre><code class="sass">$nav-menu-styles:(
+    padding-top:18px
+);
+</code></pre>
+
+<p>Finally, we'll bump up the header height to make sure the crumb navigation is placed below our new navbar:</p>
+<pre><code class="sass">$header-styles: (
+    height: 140px
 );
 </code></pre>
 

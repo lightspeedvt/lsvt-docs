@@ -227,7 +227,7 @@
 </code></pre>
 
 <h3 id="background-image">Background Image</h3>
-<p><strong>Repeating Pattern</strong>
+<p><strong>Repeating Pattern</strong><br />
 Right click and save the following image into your <code>output/images/</code> folder then copy/paste the code below into your settings file and save. You'll notice the <code>background-size</code> attribute which scales the texture down from it's original size which is helpful for retina displays.</p>
 <table>
 <thead>
@@ -248,7 +248,7 @@ Right click and save the following image into your <code>output/images/</code> f
 );
 </code></pre>
 
-<p><strong>Full Image</strong>
+<p><strong>Full Image</strong><br />
 Right click and save the following image into your <code>output/images/</code> folder then copy/paste the code below into your settings file and save. You'll notice the <code>background-size</code> attribute which scales the texture down from it's original size which is helpful for retina displays.</p>
 <table>
 <thead>
@@ -269,31 +269,27 @@ Right click and save the following image into your <code>output/images/</code> f
 );
 </code></pre>
 
-<p><strong>Multiple Images</strong><br />
-It's possible to specify multiple images in the background attribute which we'll explore now. Building off the previous examples we'll now use a repeating pattern with a fixed image in the background. Right click and save the following images into your <code>output/images/</code> folder then copy/paste the code below into your settings file and save.</p>
+<p><strong>Overlay Image</strong><br />
+It's possible to overlay an image on top of your background. Right click and save the following image into your <code>output/images/</code> folder then copy/paste the code below into your settings file and save.</p>
 <table>
 <thead>
 <tr>
-<th>Pattern Image:</th>
 <th>Overlay Image:</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><img src="../tutorial/acme_tray_bg.jpg" width="200"/></td>
 <td><img src="../tutorial/acme_tray_stamp.png" width="200"/></td>
 </tr>
 </tbody>
 </table>
-<pre><code class="sass">$tray-styles: (
-    background: (
-        url(&quot;images/acme_tray_stamp.png&quot;),
-        url(&quot;images/acme_tray_full.jpg&quot;)
-    ),
+<pre><code class="sass">$tray-overlay-styles: (
+    background: url(&quot;images/acme_tray_stamp.png&quot;),
     background-repeat: no-repeat,
-    background-position: ( 102% 50%, center ),
-    background-size: (180px 150px, cover),
-    color:#eee
+    background-size: 180px auto,
+    width: 200px,
+    margin-left: -650px,
+    top: 100px
 );
 </code></pre>
 
