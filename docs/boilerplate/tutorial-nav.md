@@ -31,6 +31,15 @@ $nav-button-styles: (
 );
 ```
 
+**Adding Rollovers**  
+If you'd like to provide rollover styles, use the following configuration. Note that these are turned off for mobile/touch environments.
+
+```sass
+$nav-hover-styles:(
+    color: red
+);
+```
+
 **Custom Backgrounds (or lack thereof)**  
 Overriding the `background` property allows you to completely customize the look and feel of the buttons.
 
@@ -93,5 +102,45 @@ Now that our nav is bumping up against the crumb navigation, let's bump up the h
 ```sass
 $header-styles:(
     height:140px
+);
+```
+
+###Using an Image for the Nav Bar
+It's possible to use an image for the nav bar, but requires some special considerations. In order allow the nav bar to scale, one image is essentially "sliced" into three parts: left, center and right. Download the following image to your `output/images/` folder to test it out:
+
+| Navbar:        |
+| -------------- |
+| <img src="../tutorial/acme_navbar.png"/> |  
+
+First, let's set the height and width of our navbar. You'll notice that we're using a slightly larger width, in which case the navbar will center horizontally:
+
+```sass
+$nav-styles:(
+    height: 66px,
+    width: 980px
+);
+```
+
+Now we'll use the  `navbar-image` and `navbar-cap-width` settings to implement the navbar image we downloaded:  
+
+```sass
+$nav-settings: (
+    navbar-image: url(images/acme_navbar.png),
+    navbar-cap-width: 30px
+);
+```
+In order to make things look better visually, we'll add `padding-top` to the nav-menu in order to move the buttons down a bit:
+
+```sass
+$nav-menu-styles:(
+    padding-top:18px
+);
+```
+
+Finally, we'll bump up the header height to make sure the crumb navigation is placed below our new navbar:
+
+```sass
+$header-styles: (
+    height: 140px
 );
 ```

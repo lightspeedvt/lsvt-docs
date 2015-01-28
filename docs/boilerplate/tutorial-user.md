@@ -12,3 +12,12 @@ $user-nav-button:(
     height:30px
 );
 ```
+
+**Adding Rollovers**  
+If you'd like to provide rollover styles, use the following configuration. Note that these are turned off for mobile/touch environments.
+
+```sass
+$user-nav-hover-styles:(
+    color: red
+);
+```

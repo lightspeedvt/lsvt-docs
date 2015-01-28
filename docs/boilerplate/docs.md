@@ -41,6 +41,10 @@ $tray-settings:(
     color-header: $ui-brand-color,
     color-link: #999
 );
+
+$tray-overlay-styles: (
+    // No defaults
+);
 ```
 
 ###Page
@@ -107,12 +111,19 @@ $nav-settings: (
         left: 0,
         bottom: 0,
         right: 0
-    )
+    ),
+    navbar-image: none,
+    navbar-cap-width: 0
+
 );
 
 $nav-button-styles:(
     // Inherits all properties of $button-styles
     margin-right: 4px
+);
+
+$nav-hover-styles:(
+    // No defaults
 );
 
 $nav-divider-styles: (
@@ -140,6 +151,10 @@ $search-button-styles: (
 ```sass
 $user-nav-button: (
     border-radius: 0 0 2px 2px
+);
+
+$user-nav-hover-styles:(
+    // No defaults
 );
 
 $user-nav-styles: (

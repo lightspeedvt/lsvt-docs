@@ -15,7 +15,7 @@ $tray-settings:(
 
 ###Background Image
 
-**Repeating Pattern**
+**Repeating Pattern**  
 Right click and save the following image into your `output/images/` folder then copy/paste the code below into your settings file and save. You'll notice the `background-size` attribute which scales the texture down from it's original size which is helpful for retina displays.
 
 | Pattern Image: |
@@ -29,7 +29,7 @@ $tray-styles: (
     color:#eee
 );
 ```
-**Full Image**
+**Full Image**  
 Right click and save the following image into your `output/images/` folder then copy/paste the code below into your settings file and save. You'll notice the `background-size` attribute which scales the texture down from it's original size which is helpful for retina displays.
 
 | Background Image: |
@@ -44,22 +44,20 @@ $tray-styles: (
 );
 ```
 
-**Multiple Images**  
-It's possible to specify multiple images in the background attribute which we'll explore now. Building off the previous examples we'll now use a repeating pattern with a fixed image in the background. Right click and save the following images into your `output/images/` folder then copy/paste the code below into your settings file and save.
+**Overlay Image**  
+It's possible to overlay an image on top of your background. Right click and save the following image into your `output/images/` folder then copy/paste the code below into your settings file and save.
 
-| Pattern Image: | Overlay Image: |
-| -------------- | -------------- |
-| <img src="../tutorial/acme_tray_bg.jpg" width="200"/> | <img src="../tutorial/acme_tray_stamp.png" width="200"/> |
+| Overlay Image: |
+| -------------- |
+| <img src="../tutorial/acme_tray_stamp.png" width="200"/> |
 
 ```sass
-$tray-styles: (
-    background: (
-        url("images/acme_tray_stamp.png"),
-        url("images/acme_tray_full.jpg")
-    ),
+$tray-overlay-styles: (
+    background: url("images/acme_tray_stamp.png"),
     background-repeat: no-repeat,
-    background-position: ( 102% 50%, center ),
-    background-size: (180px 150px, cover),
-    color:#eee
+    background-size: 180px auto,
+    width: 200px,
+    margin-left: -650px,
+    top: 100px
 );
 ```
