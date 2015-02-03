@@ -24,5 +24,4 @@ pages:
 - ['boilerplate/specific-pages.md', 'Reference', 'Customizing Specific Pages']
 - ['boilerplate/scss.md', 'Reference', 'Using Custom SCSS']
 - ['boilerplate/icons.md', 'Reference', 'Icons']
-- ['boilerplate/porting.md', 'Reference', 'Porting Existing Themes']
 theme: readthedocs
