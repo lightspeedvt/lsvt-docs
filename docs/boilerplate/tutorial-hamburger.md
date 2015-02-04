@@ -9,7 +9,8 @@ The icons and headers will inherit `$ui-brand-color` by default, but you can cus
 $tray-settings:(
     color-icon: #9A9A9A,
     color-header: #9a9a9a,
-    color-link: #eee
+    color-link: #eee,
+    color-rail: #eee
 );
 ```
 
