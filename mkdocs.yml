@@ -24,4 +24,6 @@ pages:
 - ['boilerplate/specific-pages.md', 'Reference', 'Customizing Specific Pages']
 - ['boilerplate/scss.md', 'Reference', 'Using Custom SCSS']
 - ['boilerplate/icons.md', 'Reference', 'Icons']
+# Design Patterns
+- ['patterns/inline-navbar-behind.md', 'Design Patterns', 'Inline Logo w/Navbar Behind']
 theme: readthedocs

@@ -1,3 +1,7 @@
+**2/9/15**
+
+- Created *"Design Patterns"* section and added first example: [Inline Logo w/Navbar Behind](patterns/inline-navbar-behind.md)
+
 **2/4/15**
 
 - Added `color-rail` property to `$tray-settings` documentation in [Hamburger Menu Docs](boilerplate/docs/#hamburger-menu)
