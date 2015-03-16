@@ -10,21 +10,21 @@ The `default` position will place the logo the top-left of the header with the n
 **Center Position**  
 The `center` position will center the logo in the header with the navigation positioned below. Add the following property to your previously defined `$header-settings` object:
 
-```sass
+```js
 logo-position: center
 ```
 
 **Inline Position**  
 The `inline` position will place logo in the top-left of the header with the navigation positioned beside it on the right. Add the following property to your previously defined `$header-settings` object:
 
-```sass
+```js
 logo-position: inline
 ```
 
 ###Logo Offset
 If you've implemented the `inline` position above you'll notice that things are a bit jumbled up now. Add the following property to the `header-settings` object in order to push the logo and navigation down and add some spacing to the right side.
 
-```sass
+```js
 logo-offset:(
     top:50px,
     right:20px
@@ -36,7 +36,7 @@ logo-offset:(
 ###Nav Offset
 We're looking good but that pesky nav is not quite right. You can adjust it's position via the `$nav-settings` object like so:
 
-```sass
+```js
 // Nav
 $nav-settings: (
     offset:(

@@ -5,7 +5,7 @@ This page lists all of the settings available for the Boilerplate. All of the va
 
 ###Globals
 
-```sass
+```js
 $link--color: inherit;
 $ui-border: 0 0 0 1px rgba(0,0,0,0.2);
 $ui-brand-color: #3492cf;
@@ -28,7 +28,7 @@ $debug: false;
 
 ###Hamburger Menu
 
-```sass
+```js
 $tray-styles:(
     background: url("images/bg-tray.jpg"),
     background-size: 300px 300px
@@ -50,7 +50,7 @@ $tray-overlay-styles: (
 
 ###Page
 
-```sass
+```js
 $page-styles: (
     background: url( "images/bg-site.jpg" ) top center no-repeat,
     background-color: #dbdbdb
@@ -64,7 +64,7 @@ $page-overlay-styles: (
 
 ###Custom Page Settings
 
-```sass
+```js
 $main-menu-styles:();
 
 $training-center-styles:();
@@ -72,7 +72,7 @@ $training-center-styles:();
 
 ###Header
 
-```sass
+```js
 $header-styles: (
     height: 120px,
     margin-bottom: 10px
@@ -100,7 +100,7 @@ $location-name-styles: (
 
 ###Navigation
 
-```sass
+```js
 $nav-styles: (
     background:none,
     padding: 0,
@@ -149,7 +149,7 @@ $search-button-styles: (
 
 ###User Navigation/Menu
 
-```sass
+```js
 $user-nav-button: (
     border-radius: 0 0 2px 2px
 );
@@ -165,7 +165,7 @@ $user-nav-styles: (
 
 ###Crumb Navigation
 
-```sass
+```js
 $crumb-nav-styles: (
     // No defaults
 );
@@ -188,7 +188,7 @@ $crumb-menu-settings: (
 
 ###Body (Content Area)
 
-```sass
+```js
 $body-styles: (
     // No defaults
 ); 
@@ -212,7 +212,7 @@ $body-footer-styles: (
 
 ###Footer
 
-```sass
+```js
 // Footer
 $footer-styles: (
     height: auto,

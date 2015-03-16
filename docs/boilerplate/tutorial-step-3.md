@@ -16,7 +16,7 @@ Most of the configuration objects have an identifier that relates to how they ar
 **NOTE: ** You don't have to copy/paste these, they are for example only.
 
 **Example `-styles` object:**  
-```sass
+```js
 $header-styles: (
     height: 120px,
     margin-bottom: 10px,
@@ -25,7 +25,7 @@ $header-styles: (
 ```
 
 **Example `-settings` object:**  
-```sass
+```js
 $header-settings: (
     logo-position: center
     // Non-CSS settings
@@ -54,7 +54,7 @@ Once you've downloaded the images, make sure you have Grunt running and let's ge
 **Logo**  
 Specify both the url of the logo as well as `width` and `height` values. Note that these should **NOT** be the actual dimensions of the image, but rather the **display size**. In this case, the logo image is quite large but is scaled down to remain sharp on "retina" aka "hi-dpi" displays.
 
-```sass
+```js
 // Logo Settings
 $header-settings: (
     logo-url: "images/acme_logo_red.png",
@@ -68,7 +68,7 @@ $header-settings: (
 **Accent Color**  
 Color the icons and the "rail" above the page when the Hamburger Menu is opened:
 
-```sass
+```js
 // Accent Color
 $ui-brand-color: #c1011a;
 ```
@@ -78,7 +78,7 @@ $ui-brand-color: #c1011a;
 **Hamburger Menu**  
 Set the `background` to a gradient:
 
-```sass
+```js
 // Hamburger Menu
 $tray-styles:(
     background: linear-gradient(to bottom, rgb(45, 45, 45), rgb(81, 81, 81)),
@@ -91,7 +91,7 @@ $tray-styles:(
 **Page Background**  
 Specify the image you've downloaded along with some properties for positioning, etc:
 
-```sass
+```js
 // Page Background
 $page-styles:(
     background: url( "images/acme_page_bg.jpg" ) top center no-repeat,
@@ -104,7 +104,7 @@ $page-styles:(
 **Content Background**  
 Specify the image you've downloaded along with some properties for positioning, etc:
 
-```sass
+```js
 // Content Background
 $body-content-styles:(
     background: url("images/acme_content_bg.png")
@@ -116,7 +116,7 @@ $body-content-styles:(
 **Footer**  
 Set a background image and push the footer down using `padding-top`:
 
-```sass
+```js
 // Footer Settings
 $footer-styles:(
     background: url( "images/acme_footer_shadow.png") center -120px no-repeat,

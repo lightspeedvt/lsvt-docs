@@ -16,7 +16,7 @@ Using the `$page-overlay-styles` config we'll do a number of things:
 2. Set the width of our overlay to `1200px` and center it on the page using a combination of `left:50%` and setting it's `margin-left` to half of it's width `-600px`
 3. Use `background-size` to scale down the images 
 
-```sass
+```js
 $page-overlay-styles:(
     background: (
         url( "images/acme_overlay.png") top left no-repeat,

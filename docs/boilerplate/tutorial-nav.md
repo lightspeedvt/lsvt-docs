@@ -9,7 +9,7 @@ The buttons in the boilerplate all "extend" a `$default-button` configuration wh
 
 Add the following to your `_theme.scss` file and you'll see both the navigation buttons and the buttons in the User Nav update to reflect it. You'll notice that we're only setting the `background-color` but that the buttons still have a gradient. The framework will take the color you specify and perform some calculations in order to get the shading and colors right.  
 
-```sass
+```js
 // Default Buttons
 $button-styles: (
     background-color: #444,
@@ -22,7 +22,7 @@ $button-styles: (
 **Changing Only The Navigation Buttons**  
 Rather than changing all of the buttons at once, you may want to tweak **only** the nav buttons. In order to do this, simply customize the `$nav-button-styles` object like so:
 
-```sass
+```js
 // Nav Buttons
 $nav-button-styles: (
     background-color: $ui-brand-color,
@@ -34,7 +34,7 @@ $nav-button-styles: (
 **Adding Rollovers**  
 If you'd like to provide rollover styles, use the following configuration. Note that these are turned off for mobile/touch environments.
 
-```sass
+```js
 $nav-hover-styles:(
     color: red
 );
@@ -45,7 +45,7 @@ Overriding the `background` property allows you to completely customize the look
 
 **Flat Buttons:** 
 
-```sass
+```js
 $nav-button-styles: (
     background: $ui-brand-color,
     text-shadow: none,
@@ -55,7 +55,7 @@ $nav-button-styles: (
 
 **Text-Only Buttons:** 
 
-```sass
+```js
 $nav-button-styles: (
     background: none,
     text-shadow: none,
@@ -66,7 +66,7 @@ $nav-button-styles: (
 ###Customizing Search  
 At this point you've probably noticed that modifying the nav buttons also modifies the search field and button. In some instances (like, now) this can have undesirable results. The good news is that we can customize the search input, button and even the menu using some additional properties:
 
-```sass
+```js
 // Restore the border
 $search-input-styles: (
     border:1px solid rgba(0,0,0,0.2),
@@ -89,7 +89,7 @@ Before we get to the code, let's go back and change a few things based on what w
 
 Once those are done, go ahead and add this code which will create our nav bar:
 
-```sass
+```js
 $nav-styles:(
     background: linear-gradient( to bottom, #646464, #444 ),
     padding: 8px,
@@ -99,7 +99,7 @@ $nav-styles:(
 
 Now that our nav is bumping up against the crumb navigation, let's bump up the header height a little:
 
-```sass
+```js
 $header-styles:(
     height:140px
 );
@@ -114,7 +114,7 @@ It's possible to use an image for the nav bar, but requires some special conside
 
 First, let's set the height and width of our navbar. You'll notice that we're using a slightly larger width, in which case the navbar will center horizontally:
 
-```sass
+```js
 $nav-styles:(
     height: 66px,
     width: 980px
@@ -123,7 +123,7 @@ $nav-styles:(
 
 Now we'll use the  `navbar-image` and `navbar-cap-width` settings to implement the navbar image we downloaded:  
 
-```sass
+```js
 $nav-settings: (
     navbar-image: url(images/acme_navbar.png),
     navbar-cap-width: 30px
@@ -131,7 +131,7 @@ $nav-settings: (
 ```
 In order to make things look better visually, we'll add `padding-top` to the nav-menu in order to move the buttons down a bit:
 
-```sass
+```js
 $nav-menu-styles:(
     padding-top:18px
 );
@@ -139,7 +139,7 @@ $nav-menu-styles:(
 
 Finally, we'll bump up the header height to make sure the crumb navigation is placed below our new navbar:
 
-```sass
+```js
 $header-styles: (
     height: 140px
 );

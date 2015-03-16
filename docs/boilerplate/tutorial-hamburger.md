@@ -5,7 +5,7 @@ The Hamburger Menu has a number of easily configurable customization options as 
 ###Colors
 The icons and headers will inherit `$ui-brand-color` by default, but you can customize the individual colors using the `$tray-settings` configuration below:
 
-```sass
+```js
 $tray-settings:(
     color-icon: #9A9A9A,
     color-header: #9a9a9a,
@@ -23,7 +23,7 @@ Right click and save the following image into your `output/images/` folder then 
 | -------------- |
 | <img src="../tutorial/acme_tray_bg.jpg" width="200"/> |
 
-```sass
+```js
 $tray-styles: (
     background: url("images/acme_tray_bg.jpg"),
     background-size: 100px 100px,
@@ -37,7 +37,7 @@ Right click and save the following image into your `output/images/` folder then 
 | -------------- |
 | <img src="../tutorial/acme_tray_full.jpg" width="200"/> |
 
-```sass
+```js
 $tray-styles: (
     background: url("images/acme_tray_full.jpg"),
     background-size: cover,
@@ -52,7 +52,7 @@ It's possible to overlay an image on top of your background. Right click and sav
 | -------------- |
 | <img src="../tutorial/acme_tray_stamp.png" width="200"/> |
 
-```sass
+```js
 $tray-overlay-styles: (
     background: url("images/acme_tray_stamp.png"),
     background-repeat: no-repeat,

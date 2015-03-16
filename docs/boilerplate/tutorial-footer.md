@@ -6,7 +6,7 @@ The lip is configured by the `$body-footer-styles` object, check out the followi
 
 **Hiding The Lip Completely**
 
-```sass
+```js
 $body-footer-styles: (
     display:none
 );
@@ -14,7 +14,7 @@ $body-footer-styles: (
 
 **Simplifying The Lip**
 
-```sass
+```js
 $body-footer-styles:(
     background: white,
     border-radius:0,
@@ -25,7 +25,7 @@ $body-footer-styles:(
 **Automatic Gradient Fill**  
 If you specify a `background-color` value and no `background` value, a gradient fill will automatically be generated for you based on the color you specify.
 
-```sass
+```js
 $body-footer-styles:(
     background-color: red
 );
@@ -37,7 +37,7 @@ Here we'll walk through a full customization in detailed steps.
 **Step 1**  
 Add a bottom margin to the content area and round the bottom corners ever so slightly:
 
-```sass
+```js
 // Content Background
 $body-content-styles:(
     background: url("images/acme_content_bg.png"),
@@ -49,7 +49,7 @@ $body-content-styles:(
 **Step 2**
 Modify the Powered By logo and the nav divider color:
 
-```sass
+```js
 $footer-settings: (
     poweredby-fill: #4D4D4D,
     poweredby-opacity: 100%,
@@ -60,7 +60,7 @@ $footer-settings: (
 **Step 4**  
 Flood fill the footer background, add some padding to the top and change the text color:
 
-```sass
+```js
 $footer-styles: (
     background: #333,
     padding-top:20px,
@@ -77,7 +77,7 @@ Let's add some branding/logos next to the "Powered By" logo. Download the follow
 
 Now modify your `$footer-settings` to look like this:
 
-```sass
+```js
 $footer-settings: (
     poweredby-fill: #4D4D4D,
     poweredby-opacity: 100%,
