@@ -241,7 +241,7 @@
 <p>This page lists all of the settings available for the Boilerplate. All of the values shown are the defaults which you can override.</p>
 <hr />
 <h3 id="globals">Globals</h3>
-<pre><code class="sass">$link--color: inherit;
+<pre><code class="js">$link--color: inherit;
 $ui-border: 0 0 0 1px rgba(0,0,0,0.2);
 $ui-brand-color: #3492cf;
 
@@ -261,7 +261,7 @@ $debug: false;
 
 <p><strong>NOTE: </strong> If you set <code>$debug: true</code> in your <code>_theme.scss</code> you will see borders and backgrounds on each element which can help diagnose issues.</p>
 <h3 id="hamburger-menu">Hamburger Menu</h3>
-<pre><code class="sass">$tray-styles:(
+<pre><code class="js">$tray-styles:(
     background: url(&quot;images/bg-tray.jpg&quot;),
     background-size: 300px 300px
 );
@@ -281,7 +281,7 @@ $tray-overlay-styles: (
 </code></pre>
 
 <h3 id="page">Page</h3>
-<pre><code class="sass">$page-styles: (
+<pre><code class="js">$page-styles: (
     background: url( &quot;images/bg-site.jpg&quot; ) top center no-repeat,
     background-color: #dbdbdb
 );
@@ -293,13 +293,13 @@ $page-overlay-styles: (
 </code></pre>
 
 <h3 id="custom-page-settings">Custom Page Settings</h3>
-<pre><code class="sass">$main-menu-styles:();
+<pre><code class="js">$main-menu-styles:();
 
 $training-center-styles:();
 </code></pre>
 
 <h3 id="header">Header</h3>
-<pre><code class="sass">$header-styles: (
+<pre><code class="js">$header-styles: (
     height: 120px,
     margin-bottom: 10px
 );
@@ -325,9 +325,13 @@ $location-name-styles: (
 </code></pre>
 
 <h3 id="navigation">Navigation</h3>
-<pre><code class="sass">$nav-styles: (
+<pre><code class="js">$nav-styles: (
     background:none,
     padding: 0,
+);
+
+$nav-menu-styles: (
+    // No defaults
 );
 
 $nav-settings: (
@@ -369,10 +373,14 @@ $search-button-styles: (
     // Inherits all properties of $nav-button-styles
 );
 
+$search-menu-styles: (
+    // No defaults
+);
+
 </code></pre>
 
 <h3 id="user-navigationmenu">User Navigation/Menu</h3>
-<pre><code class="sass">$user-nav-button: (
+<pre><code class="js">$user-nav-button: (
     border-radius: 0 0 2px 2px
 );
 
@@ -386,7 +394,7 @@ $user-nav-styles: (
 </code></pre>
 
 <h3 id="crumb-navigation">Crumb Navigation</h3>
-<pre><code class="sass">$crumb-nav-styles: (
+<pre><code class="js">$crumb-nav-styles: (
     // No defaults
 );
 
@@ -407,7 +415,7 @@ $crumb-menu-settings: (
 </code></pre>
 
 <h3 id="body-content-area">Body (Content Area)</h3>
-<pre><code class="sass">$body-styles: (
+<pre><code class="js">$body-styles: (
     // No defaults
 ); 
 
@@ -429,7 +437,7 @@ $body-footer-styles: (
 </code></pre>
 
 <h3 id="footer">Footer</h3>
-<pre><code class="sass">// Footer
+<pre><code class="js">// Footer
 $footer-styles: (
     height: auto,
     background: none,

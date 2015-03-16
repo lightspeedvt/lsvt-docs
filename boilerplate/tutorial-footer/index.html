@@ -228,13 +228,13 @@
 <h3 id="styling-the-lip">Styling The Lip</h3>
 <p>The lip is configured by the <code>$body-footer-styles</code> object, check out the following examples:</p>
 <p><strong>Hiding The Lip Completely</strong></p>
-<pre><code class="sass">$body-footer-styles: (
+<pre><code class="js">$body-footer-styles: (
     display:none
 );
 </code></pre>
 
 <p><strong>Simplifying The Lip</strong></p>
-<pre><code class="sass">$body-footer-styles:(
+<pre><code class="js">$body-footer-styles:(
     background: white,
     border-radius:0,
     height:12px
@@ -243,7 +243,7 @@
 
 <p><strong>Automatic Gradient Fill</strong><br />
 If you specify a <code>background-color</code> value and no <code>background</code> value, a gradient fill will automatically be generated for you based on the color you specify.</p>
-<pre><code class="sass">$body-footer-styles:(
+<pre><code class="js">$body-footer-styles:(
     background-color: red
 );
 </code></pre>
@@ -252,7 +252,7 @@ If you specify a <code>background-color</code> value and no <code>background</co
 <p>Here we'll walk through a full customization in detailed steps.</p>
 <p><strong>Step 1</strong><br />
 Add a bottom margin to the content area and round the bottom corners ever so slightly:</p>
-<pre><code class="sass">// Content Background
+<pre><code class="js">// Content Background
 $body-content-styles:(
     background: url(&quot;images/acme_content_bg.png&quot;),
     border-radius:0 0 4px 4px,
@@ -262,7 +262,7 @@ $body-content-styles:(
 
 <p><strong>Step 2</strong>
 Modify the Powered By logo and the nav divider color:</p>
-<pre><code class="sass">$footer-settings: (
+<pre><code class="js">$footer-settings: (
     poweredby-fill: #4D4D4D,
     poweredby-opacity: 100%,
     divider-color: $ui-brand-color
@@ -271,7 +271,7 @@ Modify the Powered By logo and the nav divider color:</p>
 
 <p><strong>Step 4</strong><br />
 Flood fill the footer background, add some padding to the top and change the text color:</p>
-<pre><code class="sass">$footer-styles: (
+<pre><code class="js">$footer-styles: (
     background: #333,
     padding-top:20px,
     color: #9C9C9C
@@ -295,7 +295,7 @@ Let's add some branding/logos next to the "Powered By" logo. Download the follow
 </tbody>
 </table>
 <p>Now modify your <code>$footer-settings</code> to look like this:</p>
-<pre><code class="sass">$footer-settings: (
+<pre><code class="js">$footer-settings: (
     poweredby-fill: #4D4D4D,
     poweredby-opacity: 100%,
     divider-color: $ui-brand-color,
