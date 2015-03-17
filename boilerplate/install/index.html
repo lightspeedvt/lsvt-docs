@@ -67,8 +67,6 @@
                         
                             <li class="toctree-l3"><a href="#why-do-i-have-to-install-stuff">Why Do I Have to Install Stuff?</a></li>
                             
-                                <li><a class="toctree-l4" href="#full-installation-mac-osx-recommended">Full Installation - Mac OSX (Recommended)</a></li>
-                            
                                 <li><a class="toctree-l4" href="#basic-installation-windows-linux-etc">Basic Installation - Windows, Linux, Etc</a></li>
                             
                         
@@ -88,22 +86,17 @@
             <span>Tutorial</span>
             
                 <li class="toctree-l2 ">
-                    <a class="" href="../tutorial-intro">Intro</a>
+                    <a class="" href="../tutorial-intro">Introduction</a>
                     
                 </li>
             
                 <li class="toctree-l2 ">
-                    <a class="" href="../tutorial-step-1">Step 1 - Using Branches</a>
+                    <a class="" href="../tutorial-step-1">Creating Your Theme</a>
                     
                 </li>
             
                 <li class="toctree-l2 ">
-                    <a class="" href="../tutorial-step-2">Step 2 - Using Grunt</a>
-                    
-                </li>
-            
-                <li class="toctree-l2 ">
-                    <a class="" href="../tutorial-step-3">Step 3 - Editing Your Theme</a>
+                    <a class="" href="../tutorial-step-3">Editing Your Theme</a>
                     
                 </li>
             
@@ -146,20 +139,20 @@
 
     
         
-            <span>Reference</span>
+            <span>Next Steps</span>
             
                 <li class="toctree-l2 ">
-                    <a class="" href="../porting">Porting Existing Themes</a>
+                    <a class="" href="../tutorial-step-4">Previewing & Publishing Your Theme</a>
                     
                 </li>
             
                 <li class="toctree-l2 ">
-                    <a class="" href="../publishing">Preview & Publish</a>
+                    <a class="" href="../editing-themes">Editing Existing Themes</a>
                     
                 </li>
             
                 <li class="toctree-l2 ">
-                    <a class="" href="../docs">Documentation</a>
+                    <a class="" href="../porting">Porting Legacy Themes</a>
                     
                 </li>
             
@@ -170,6 +163,17 @@
             
                 <li class="toctree-l2 ">
                     <a class="" href="../scss">Using Custom SCSS</a>
+                    
+                </li>
+            
+        
+
+    
+        
+            <span>Reference</span>
+            
+                <li class="toctree-l2 ">
+                    <a class="" href="../docs">Documentation</a>
                     
                 </li>
             
@@ -222,57 +226,11 @@
           <div role="main">
             <div class="section">
               <h1 id="why-do-i-have-to-install-stuff">Why Do I Have to Install Stuff?</h1>
-<p>The boilerplate themes are generated via a specific set of tools that must be installed on your system. Once installed you'll be ready to start generating themes! Once you've completed either the Full or Basic installation below, please proceed to the <a href="../boilerplate/setup">setup instructions</a>.</p>
-<h3 id="full-installation-mac-osx-recommended">Full Installation - Mac OSX (Recommended)</h3>
-<p>Following the instructions below will setup the automated installer <a href="http://kitchenplan.github.io/kitchenplan/">Kitchenplan</a> and use our custom configuration to get your system up to speed in no time!</p>
-<ul>
-<li><strong>Sublime Text 3</strong> - Preconfigured with extensions, etc</li>
-<li><strong>Sourcetree</strong> - Version control for working with GitHub</li>
-<li><strong>NodeJS</strong> - Server for live-reload and build tools</li>
-<li><strong>SASS</strong> - CSS Preprocessor</li>
-<li><strong>Grunt</strong> - Build tool for compiling and publishing themes</li>
-<li><strong>TotalTerminal</strong> - Makes OSX's Terminal.app easier to access and use</li>
-</ul>
-<hr />
-<p><strong>IMPORTANT: </strong> Before proceeding with the Kitchen plan install we'll need to add your OSX user name to the configuration files, please contact <a href="../&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#97;&#115;&#101;&#121;&#46;&#99;&#111;&#114;&#99;&#111;&#114;&#97;&#110;&#64;&#108;&#105;&#103;&#104;&#116;&#115;&#112;&#101;&#101;&#100;&#118;&#116;&#46;&#99;&#111;&#109;">&#99;&#97;&#115;&#101;&#121;&#46;&#99;&#111;&#114;&#99;&#111;&#114;&#97;&#110;&#64;&#108;&#105;&#103;&#104;&#116;&#115;&#112;&#101;&#101;&#100;&#118;&#116;&#46;&#99;&#111;&#109;</a> first!</p>
-<ol>
-<li>
-<p>Open Applications/Utilities/Terminal.app</p>
-</li>
-<li>
-<p>Update Ruby Gems:<br />
-<code>sudo gem update --system</code></p>
-</li>
-<li>
-<p>Install Kitchenplan:<br />
-<code>sudo gem install kitchenplan</code></p>
-</li>
-<li>
-<p>Run Kitchenplan setup:<br />
-<code>kitchenplan setup</code></p>
-</li>
-<li>
-<p>At the prompt:<br />
-<code>Do you have a config repository? [y,n]</code> type <code>y</code> and press enter</p>
-</li>
-<li>
-<p>At the prompt:<br />
-<code>Please enter the clone URL of your git config repository:</code> paste this url: <code>https://github.com/lightspeedvt/boilerplate-config.git</code> and press enter</p>
-</li>
-<li>
-<p>Once setup has completed type:<br />
-<code>kitchenplan provision</code> and press enter<br />
-All of the various tools will be installed and the process should complete after a while. Note that due to a bug, step 7 must be done manually and is not automated via Kitchenplan.</p>
-</li>
-<li>
-<p>Install SASS<br />
-<code>sudo gem install sass</code></p>
-</li>
-</ol>
-<hr />
+<p>The boilerplate themes are generated via a specific set of tools that must be installed on your system. Once installed you'll be ready to start generating themes! Once you've installated the tools below, please proceed to the <a href="../setup">setup instructions</a>.</p>
 <h3 id="basic-installation-windows-linux-etc">Basic Installation - Windows, Linux, Etc</h3>
 <p>The minimum tools you'll need on any system to compile and publish themes are listed below:</p>
 <ol>
+<li><strong>GIT -</strong> <a href="http://git-scm.com/downloads">Downloads</a></li>
 <li><strong>SASS -</strong> <a href="http://sass-lang.com/install">Installation Instructions</a></li>
 <li><strong>NodeJS -</strong> <a href="http://nodejs.org/">Installation Instructions</a></li>
 <li><strong>Grunt CLI -</strong> <a href="http://gruntjs.com/getting-started">Installation Instructions</a></li>
