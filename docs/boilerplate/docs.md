@@ -106,6 +106,10 @@ $nav-styles: (
     padding: 0,
 );
 
+$nav-menu-styles: (
+    // No defaults
+);
+
 $nav-settings: (
     offset:(
         top: 0,
@@ -143,6 +147,10 @@ $search-input-styles: (
 
 $search-button-styles: (
     // Inherits all properties of $nav-button-styles
+);
+
+$search-menu-styles: (
+    // No defaults
 );
 
 ```

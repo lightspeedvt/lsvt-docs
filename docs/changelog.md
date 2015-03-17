@@ -1,3 +1,13 @@
+**3/16/15**
+
+- Added `$search-menu-styles` and `$nav-menu-styles` in [Navigation Docs](boilerplate/docs/#navigation)
+- Updated [Installation](boilerplate/install) and [Setup](boilerplate/setup) pages.
+- Renamed [Publishing instructions](boilerplate/tutorial-step-4.md) to "Previewing & Publishing Your Theme"
+- Removed outdated step 1 and 2 pages
+- Added [Creating Your Theme](boilerplate/tutorial-step-1)
+- Reorganized Sidebar Categories
+
+
 **2/9/15**
 
 - Created *"Design Patterns"* section and added first example: [Inline Logo w/Navbar Behind](patterns/inline-navbar-behind.md)
@@ -27,6 +37,6 @@
 
 **12/30/14**  
 
-- Added [Publishing instructions](boilerplate/publishing.md)  
+- Added [Publishing instructions](boilerplate/tutorial-step-4.md)  
 - Added [Page Specifc instructions](boilerplate/specific-pages.md)
-- Started Changelog :)
+- Started Changelog `:)`
